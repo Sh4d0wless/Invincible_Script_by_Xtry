@@ -1,0 +1,11 @@
+5                  K \
+5                 IS\  \
+5                SKISS\  \
+5               KISSKIS \  \
+5              SKISSKISS
+5            sKISSKISSKISs
+5          sSKISSKISSKISSKIs
+5        sSKISSKISSKISSKISSKISs
+5       SKISSKISSKISSKISSKISSKIS
+5       SKISSKISSKISSKISSKISSKIS
+5        SKISSKISSKISSKISSKISSK
