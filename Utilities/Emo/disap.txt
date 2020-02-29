@@ -1,0 +1,4 @@
+$gtzr.set(Colors,Color.1) $+ , $+ $gtzr.set(Colors,Color.2) $+ :|
+$gtzr.set(Colors,Color.2) $+ , $+ $gtzr.set(Colors,Color.1) $+ :|
+$gtzr.set(Colors,Color.1) $+ , $+ $gtzr.set(Colors,Color.2) $+ ;|
+$gtzr.set(Colors,Color.2) $+ , $+ $gtzr.set(Colors,Color.1) $+ ;|

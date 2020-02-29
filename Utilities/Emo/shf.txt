@@ -1,0 +1,8 @@
+$gtzr.set(Colors,Color.1) $+ , $+ $gtzr.set(Colors,Color.2) $+ :O
+$gtzr.set(Colors,Color.2) $+ , $+ $gtzr.set(Colors,Color.1) $+ :O
+$gtzr.set(Colors,Color.1) $+ , $+ $gtzr.set(Colors,Color.2) $+ ;O
+$gtzr.set(Colors,Color.2) $+ , $+ $gtzr.set(Colors,Color.1) $+ ;O
+$gtzr.set(Colors,Color.1) $+ , $+ $gtzr.set(Colors,Color.2) $+ :o
+$gtzr.set(Colors,Color.2) $+ , $+ $gtzr.set(Colors,Color.1) $+ :o
+$gtzr.set(Colors,Color.1) $+ , $+ $gtzr.set(Colors,Color.2) $+ ;o
+$gtzr.set(Colors,Color.2) $+ , $+ $gtzr.set(Colors,Color.1) $+ ;o
