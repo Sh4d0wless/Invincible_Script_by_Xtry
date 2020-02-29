@@ -1,0 +1,10 @@
+------------------------------------------------------------------------------
+ BigFont by Andy Dufilie (^Andy)
+------------------------------------------------------------------------------
+ Homepage:  http://come.to/andys.site/  or  http://pages.cthome.net/pdufilie/
+------------------------------------------------------------------------------
+ Files needed:  bigfont.mrc  and  bigfont.dat
+------------------------------------------------------------------------------
+ Type "/bigfont <text>" in a channel, query, or status window
+   or "/bigfont" with no parameters to open the editor.
+------------------------------------------------------------------------------

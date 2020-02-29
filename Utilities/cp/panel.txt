@@ -1,0 +1,77 @@
+graph\theme.ico	Script Theme	/thema
+graph\aoperz.ico	Auto Oper 	/aoperz
+graph\chan.ico	Auto Join  	/aj
+graph\id.ico	Auto Identify  	/aid
+graph\ajoin.ico	Auto Thanks  	/authx
+graph\huhsmile.ico	Ghost Killer  	/ghostkill
+graph\sck.ico	Auto Pinger  	/aping
+graph\soundsys.ico	Sound System  	/gtzwav
+graph\echosys.ico	Echo System  	/echosys
+graph\dcci.ico	DCC Controls  	/dccgtz
+graph\colors.ico	Nicklist Colors  	/nlc
+graph\ts.ico	Timestamp Styler  	/tsgtz
+graph\kcounterx.ico	Kick Counter  	/kickcounter
+graph\fonts.ico	Scripted Text Setup 	/gtzsctxt
+graph\awaysys.ico	Away System 	/awaysys.config
+graph\memox.ico	Memo Express	/memos
+graph\scanner.ico	Net Scanner	/scanner
+graph\explor.ico	URL Central	/urlc
+graph\emailerz.ico	Email Client	/emailer
+graph\down.ico	File Server Setup	/fservx
+graph\user.ico	User List   	/userlist
+graph\kompi.ico	System Info	/sysi
+graph\multi.ico	Multi Network Info	/servinfo
+graph\macan.ico	Personal Info	/status
+graph\abconn.ico	DCC Transfer Info	/dccinfo
+utilities/weather/prev.ico	Weather Forecaster	/weafor
+graph\time.ico	Time Info	/time
+graph\chars.ico	Chars Map	/charmap
+graph\font2.ico	Text To Chars	/txt2c
+utilities/mc.exe	MC           	/run utilities/mc.exe
+graph\filem.ico	Transfer Manager	/filetm
+graph\quote.ico	Quote Manager	/quoteman
+graph\f.ico 	Nick Completor	/ncpro
+graph\noteview.ico 	Notify Viewer	/check.notify
+graph\kickpl.ico 	Kicked User List	/kickpl
+graph\listm.ico 	List Maker	/dialist
+graph\nicks.ico 	Auto Regain Nick	/aregainn
+graph\ipscan.ico 	Ip & Nick Finder	/Ip.scan
+graph\connector2.ico 	Connector 	/connect2
+graph\rprog.ico 	Run Programs 	/rprog
+graph\autotm.ico 	Auto Timed Msg 	/autotm
+graph\ignore.ico 	Ignore Manager 	/ignore.manager
+graph\seen.ico 	Seen System 	/seen
+graph\fav.ico 	Favorites 	/fav
+graph\logs.ico 	File Dropper 	/fidrop
+graph\explorex.ico 	FTP Advertisement 	/ftpad
+graph\fun.ico 	Personal Games 	/gamez
+graph\pets.ico 	Funny Pets	/petz
+graph\e-color.ico 	Colorfull Text Box 	/tbox
+graph\statprot.ico 	Status Prot	/gtz.cpro
+graph\protx.ico 	Channel Protection	/akick
+graph\prot.ico 	Personal Flood Prot	/pp
+graph\key.ico 	Script Pass Prot	/gtzpp
+graph\mp3.ico 	Mp3stuff Options	/mp3stuffs
+graph\gtzlogo.ico 	About   	/authorx
+graph\chanserv.ico 	Chanserv Options   	/gtzdalc
+graph\nickserv.ico 	Nickserv Options   	/gtzdaln
+graph\statserv.ico 	Statserv Options   	/gtzdals
+graph\vote.ico 	Vote Box   	/votebox
+graph\calcx.ico 	Channel Counter   	/chcount
+graph\text.ico 	Text System   	/xssctxt
+graph\conh.ico	Connection History	/connexhis
+graph\fsearchf.ico	Search System	/dfsearchf
+graph\quit.ico	Quits Editor	/qdialquit
+utilities\iplookup\iplookup.exe	IP Lookup	/run utilities/iplookup/iplookup.exe
+graph\help.ico	Help Center	/gtzhelp
+graph/spam.ico	Antispam Bot	/as.settings
+graph/secque.ico	Secure Query	/secure.query
+utilities/irclean.exe	IRClean		/run utilities/irclean.exe
+graph/macan.ico	Personal Info	/personainx
+graph/intromy.ico	Intro Setup	/introx
+graph/picp.ico	Pic Player		/picplay
+graph/tro.ico	Trojan Scanner	/tscan
+graph/lyric.ico	Lyrics Finder	/lyrics
+graph/agreet.ico	Auto Greet	/agreetx
+graph/alarm.ico	Alarm Clock	/alarmx
+graph/dict.ico	Dictionary	/dict
