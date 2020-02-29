@@ -1,0 +1,23 @@
+
+
+00,01ILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILO 
+00,01LOVEYOUILO 04***** 00VEYOU04 ****** 00ILOVEYOUILOVE 
+00,01ILOVEYOU 04********** 00I 04*********** 00LOVEYOUIL 
+00,01OUIUI 04************** *************** 00VEYOUI 
+00,01YOUI 04********************************* 00LOVE 
+00,01UI 04************************************ 00OVE 
+00,01L 04***********00I04**00LOVE04**00YOU04*00!04************ 00OVE 
+00,01I 04************************************** 00LO 
+00,01U 04************************************** 00IL 
+00,01OU 04************************************ 00ILO 
+00,01UIL 04********************************** 00OVEY 
+00,01OVEYO 04****************************** 00ULOVEY 
+00,01OVEYOUI 04*************************** 00LOVEYOU 
+00,01EYOUILOVE *04********************* 00YOUILOVEYO 
+00,01VEYOUILOVEYOU04 **************** 00ILOVEYOUILOV 
+00,01ILOVEYOUILOVEYO 04************ 00LOVEYOUILOVEYO 
+00,01UILOVEYOUILOVEYOU 04******** 00LOVEYOUILOVEYOUI 
+00,01LOVEYOUILOVEYOUILOV 04**** 00ILOVEYOUILOVEYOUIL 
+00,01EYOUILOVEYOUILOVEYOU 04** 00YOULOVEYOUILOVEYOUI 
+00,01VEYOUILOVEYOUILOVEYOU 04* 00VEYOUILOVEYOUILOVEY 
+00,01OVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVE 

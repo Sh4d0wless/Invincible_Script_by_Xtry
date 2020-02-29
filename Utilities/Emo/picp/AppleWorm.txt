@@ -1,0 +1,25 @@
+3,1                         .                    
+3,1                       .OO                    
+3,1                     .OOOO                    
+3,1                    .OOOO'                    
+3,1                    OOOO'          8,1.-~~~~-.   
+3,1                    OOO'          8,1/   12,1(o)(o)  
+4,1            .OOOOOO 3,1`O 4,1.OOOOOOO. 8,1/      .. |  
+4,1        .OOOOOOOOOOOO OOOOOOOOOO8,1/\    \____/  
+4,1      .OOOOOOOOOOOOOOOOOOOOOOOO8,1/ \\   ,\_/    
+4,1     .OOOOOOO%%OOOOOOOOOOOOO(#8,1/\     / 4,1.      
+4,1    .OOOOOO%%%OOOOOOOOOOOOOOO8,1\ \\  \/ 4,1OO.     
+4,1   .OOOOO%%%%OOOOOOOOOOOOOOOOO8,1\   \/ 4,1OOOO.    
+4,1   OOOOO%%%%OOOOOOOOOOOOOOOOOOO8,1\_\/ 4,1\OOOOO    
+4,1   OOOOO%%%OOOOOOOOOOOOOOOOOOOOO\###)OOOOO    
+4,1   OOOOOO%%OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO    
+4,1   OOOOOOO%OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO    
+4,1   `OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO'    
+8,1 .-~~ \4,1OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO'     
+8,1/ _/  `\ 4,1(#\OOOOOOOOOOOOOOOOOOOOOOOOOOO'      
+8,1/ / \  /`~~ 4,1\OOOOOOOOOOOOOOOOOOOOOOOOO'       
+8,1|/' `\//  \\ 4,1\OOOOOOOOOOOOOOOOOOOOOOO'        
+8,1      `-.__\_,4,1\OOOOOOOOOOOOOOOOOOOOO'         
+8,1          4,1`OO\#)OOOOOOjÂ–ÍOOOOOOOOO'          
+8,1             4,1`OOOOOOOOO''OOOOOOOOO'           
+8,1               4,1`""""""'  `""""""'             

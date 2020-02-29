@@ -1,0 +1,33 @@
+
+04,1                         VVVVVV      VVVVVV      
+04,1                       VVVVVVVVVV  VVVVVVVVVV    
+04,1                     VVVVVVVVVVVVVVVVVVVVVVVVVV  
+04,1                     VVVVVVVVVVVVVVVVVVVVVVVVVV  
+04,1        XXXXXX       VVVVVVVVVVVVVVVVVVVVVVVVVV  
+04,1     XXXXXXXXXXX      VVVVVVVVVVVVVVVVVVVVVVVV   
+04,1    XXXXXXXXXXXXX      VVVVVVVVVVVVVVVVVVVVVV    
+04,1   XXXXXXXXXXXXXXXX     VVVVVVVVVVVVVVVVVVVV     
+04,1   XXXXXXXXXXXXXXXX      VVVVVVVVVVVVVVVVVV      
+04,1   XXXXXXXXXXXXXXXX     XXVVVVVVVVVVVVVVVV       
+04,1    XXXXXXXXXXXXXXXX    XXXVVVVVVVVVVVVVV        
+04,1       XXXXXXXXXXX     XXXX VVVVVVVVVVVV         
+04,1           XXXXXXXXXXXXXXXX  VVVVVVVVVV          
+04,1    XXXXXX  XXXXXXXXXXXXXX    VVVVVVVV           
+04,1  XXXXXXXXXXXXXXXXXXXXXX       VVVVVV            
+04,1 XXXXXXXXXXXXXXXXXXXX           VVVV             
+04,1XX XX XX XXXXXXXXXXXX            VV              
+04,1X  X  X  XXXXXXXXXXXX                            
+04,1        XXXXXXXXXXXX                             
+04,1       XXXXXXXXXXXXX                             
+04,1       XXXXXXXXXXXXXX                            
+04,1       XXXXXXXXXXXXXXX                           
+04,1        XXXXXXXXXXXXXXX                          
+04,1       XXXXXXX  XXXXXXXX                         
+04,1      XXXXXXX     XXXXXXX                        
+04,1 XXXXXXXXXXX        XXXXXX                       
+04,1 XXXXXXXXX           XXXXX                       
+04,1 XXXX                 XXXXX                      
+04,1  XXX                  XXXXX                     
+04,1                        XXXX                     
+04,1                         XXXXXX                  
+04,1                          XXXXXX                 
