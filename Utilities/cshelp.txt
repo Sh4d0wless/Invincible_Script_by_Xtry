@@ -1,0 +1,104 @@
+• Register :
+To register a channel you must have a fully registered nickname. and make sure the channel that you want to register is not registered by someone else with /chanserv info #ChannelName. if it's an unregister channel so join the channel and you can register it by typing /chanserv register #ChannelName password description ..ie : /chanserv register #TestChan 4nyG00dP4ss My First Channel
+
+• Drop :
+Dropping a channel has 2 steps , before you do it make sure you identified your channel by typing /chanserv identify #ChannelName password. the 1st step is type /chanserv drop #ChannelName ..then you will receive a drop codes from Chanserv, then the 2nd step is type /chanserv drop #ChannelName DropCode
+
+• Identify :
+To identify a channel you can type /chanserv identify #ChannelName password , or simply type /identify #ChannelName password
+
+• Info :
+You can check a channel information by typing /chanserv info #ChannelName , the info will tell you who is the channel founder,permanent modes for that channel,current topic,etc
+
+• Change Founder :
+To change the founder nickname at first you must use the new founder nickname, then identify the channel with /identify #ChannelName password. Then type /chanserv set #ChannelName founder
+
+• Identify as founder :
+identify as the founder of the channel is same as identify into your channel , type /chanserv identify #ChannelName password
+
+• Sop :
+To add an Sop you can type /chanserv sop #ChannelName add nickname , to delete an Sop from your channel's Sop list you can type /chanserv sop #ChannelName del nickname , and to list out the Sops of your channel you can type /chanserv sop #ChannelName list , to wipe the list you can type /chanserv sop #ChannelName wipe
+
+• Aop :
+To add an Aop you can type /chanserv aop #ChannelName add nickname , and to delete one of Aops you can type /chanserv aop #ChannelName del nickname , and to list out the Aops you can type /chanserv aop #ChannelName list , to wipe the list you can type /chanserv aop #ChannelName wipe
+
+• Why :
+If you have a question like "why he Opped here ?.. who is he ?.. what is his access here ?" maybe you'll got the answer by typing /chanserv why #ChannelName Nickname , note that you must have op access in that channel too
+
+• Access :
+To check someone access on a channel you can type /chanserv access #ChannelName nickname ..or /chanserv acc #ChannelName Nickname , note that you must have op access in that channel too
+
+• Mass Deop :
+To mass deop a channel you can type /chanserv mdeop #ChannelName , but you can't do it if there's a user who has higher access than you in the channel
+
+• Mass Kick :
+To mass kick a channel you can type /chanserv mkick #ChannelName , but you can't do it if there's a user who has higher access than you in the channel
+
+• Sendpass :
+If you forgot your channel password , you can type /chanserv sendpass #ChannelName Email , then the channel password will be send into the founder Email
+
+• Invite :
+if the channel was +i (invite only) and you want to invite your self or a friend to join the channel , you can type /chanserv invite #ChannelName nickname
+
+• Unban :
+To unban you must have op access in the channel, to unban your self you can type /chanserv unban #ChannelName , to unban other user type /chanserv unban #Channel Nickname , and to clear the ban list in a channel you can type /chanserv unban #ChannelName *
+
+• Akick :
+only Sop or above can do the Akick Options, To add a user or address in AKick you can type /chanserv akick #ChannelName add Nickname!Ident@Hostname , to remove it type /chanserv akick #ChannelName del Nickname!Ident@Hostname , to list it type /chanserv akick #ChannelName list , to clear the list you can type /chanserv akick #ChannnelName wipe
+
+• Count :
+If you have a question like "How many Aops here ?.. how many Sops Here ?" you can find the answer by typing /chanserv count #ChannnelName , it will display you how much Sops,Aops,Akicks in that channel
+
+• Op :
+To Op yourself or someone with chanserv , you can type /chanserv op #ChannelName nickname
+
+• Deop :
+To Deop yourself or someone with chanserv , you can type /chanserv deop #ChannelName nickname
+
+• Description :
+To change the description of your channel , you can type /chanserv set #ChannelName desc NewDescription
+
+• Ident :
+To set your channel Ident to ON , type /chanserv set #ChannelName ident on , and to set it to OFF , type /chanserv set #ChannelName ident off
+
+• Keeptopic :
+To set it ON , you can type /chanserv set #ChannelName ident on , and to set the Keeptopic to OFF , you can type /chanserv set #ChannelName keeptopic off
+
+• Mailblock :
+to activate the mailblock option for your channel you can type /chanserv set #ChannelName mailblock on , and to set it off type /chanserv set #ChannelName mailblock off ..please note that activated the mailblock options means you can't do the Sendpass command for your channel , so be sure to do it
+
+• Memo Level :
+Setting Memo Level means you choose which access allowed to send memo to the channel, to set it to founder type /chanserv set #ChannelName memo founder , to Sops type /chanserv set #ChannelName memo Sop , and to set it to None (all Ops can send memo to the channel) type /chanserv set #ChannelName memo none
+
+• Mlock (Mode Lock) :
+Set the Mlock means setting your channel modes for permanently, you can do it by typing /chanserv set #ChannelName mlock ModesHere ..ie : type /chanserv set #TestChan mlock +nt-ikl
+
+• Opguard :
+Set the Opguard Options of your channel means toggle the Secured Op options , to set it ON type /chanserv set #ChannelName opguard on , and to set it OFF you can type /chanserv set #ChannelName opguard off
+
+• Change Password :
+to change your channel password at first you must identify your channel by typing /chanserv identify #ChannelName password , then type /chanserv set #ChannnelName passwd Currentpasswd Newpasswd
+
+• Private :
+to set your channel to Private , type /chanserv set #ChannelName private on , and to set it OFF type /chanserv set #ChannelName private off
+
+• Restrict :
+To Restrict your channel , you can type /chanserv set #ChannelName restrict on , this will allow Aop or above to join the channel , if there's another user join the channel he'll got kick by Chanserv with message "Restricted Channel" , and to set it OFF type /chanserv set #ChannelName restrict off
+
+• Topiclock :
+Set your Topiclock means you choose which access will allow to change the channel topic, to set it to founder , type /chanserv set #ChannelName topiclock founder , to set it to Sops type /chanserv set #ChannnelName topiclock sop , and to set it to OFF (means all Ops can change the channel's topic) type /chanserv set #ChannelName topiclock off
+
+• Unsecure :
+This means lessens the security of your channel, to set it ON you can type /chanserv set #ChannelName unsecure on , and to set it OFF type /chanserv set #ChannelName unsecure off
+
+• URL :
+You can set an URL or website for your channel , to do it you can type /chanserv set #ChannelName url URLHere ..ie : type /chanserv set #TestChan url http://www.TestChan.com ,and to set it OFF you can type /chanserv set #ChannelName url off
+
+• Verbose :
+activated the Verbose means Chanserv will notice the current Ops in the channel if there was an action about adding Sop,Aop,Akick or Deleting Aop,Sop etc. To set it on you can type /chanserv set #ChannelName verbose on , to set it OFF you can type /chanserv set #ChannelName verbose off
+
+• Web Password :
+You can set your web password by typing /chanserv set #ChannelName webpasswd Password
+
+• Note :
+If you were in DALnet and still have questions about Chanserv (Channel Service) you can type /chanserv help ..and /chanserv help set ..or you can ask it in #DALnetHelp
