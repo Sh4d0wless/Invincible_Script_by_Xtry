@@ -1,0 +1,6 @@
+[ma/web]:Please do not advertise your website on this channel
+[ma/inv]:Please do not advertise your channel on this channel
+[ma/net]:Please do not advertise your network or server on this channel
+[exp/bd]:Please do not attempt to exploit users
+[exp/vrs]:You are sending viruses to other users. Please visit http://www.nohack.net
+[autogreet]:Autogreets are not allowed on this channel

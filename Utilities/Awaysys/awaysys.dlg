@@ -1,0 +1,600 @@
+;___________________________________________
+; Invincible by Xtry
+; Away System
+; mailto: InvincibleScript@yahoo.com
+;¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+on *:START:{
+  if ($version >= 5.71) {
+    if ($isfile($shortfn($scriptdirawaysys.mrc))) {
+      if ($script(awaysys.mrc) == $null) { .load -rs $shortfn($scriptdirawaysys.mrc) }
+    }
+    else { echo $colour(info) *** AwaySystem - ERROR Missing script file ' $+ $scriptdirawaysys.mrc' Ensure the file exists and reload AwaySystem. | .unload -rs $nopath($script) }
+    if ($asdiagver != $asver) { echo $colour(info) *** AwaySystem - WARNING Dialog script is incompatable with AwaySystem core script. }
+  }
+  else { if ($script(awaysys.mrc) == $false) { echo $colour(info) *** AwaySystem - ERROR mIRC 5.71 or later is required. | .unload -rs $nopath($script) } }
+}
+dialog asconf {
+  title "Away System"
+  icon graph/awaysys.ico
+  size -1 -1 273 171
+  option dbu
+  menu "&File", 200
+  item "E&xit", 201
+  menu "&Tools", 206
+  item "Show &Status bar", 208
+  item break, 300
+  menu "&EventLog Utilities" 219, 206
+  item "&LogViewer", 207
+  item "&Clear EventLog", 24
+  item break, 304, 206
+  item "&Clear AwayNicks && Away Messages", 218
+  item "&Reset Preferences", 209
+  menu "&Help", 211
+  item "&Email Author", 213
+  item break, 302
+  item "&About Away System", 216
+  tab "Main Preferences", 400, 3 0 266 126
+  tab "Sounds && AwayNick", 401
+  tab "Message Themes", 402
+  tab "Presets", 403
+  tab "Miscellaneous", 404
+  box "AwayPager Options", 1, 10 20 125 44, tab 400
+  check "Enable Away&Pager", 2, 15 30 55 7, tab 400  
+  check "&Allow Pages in Back Mode", 3, 15 40 74 7, tab 400
+  check "Send &Reply on message reception", 4, 15 50 90 7, tab 400
+  box "AwayLog Options", 5, 10 60 125 63, tab 400
+  check "Enable &AwayLog", 6, 15 70 50 7, tab 400
+  check "Include &Notices", 7, 15 80 48 7, tab 400
+  check "Close /ms&g Windows", 86, 68 80 59 7, tab 400
+  check "Include Actio&ns", 8, 15 90 65 7, tab 400
+  check "&Let user know you're in Away Mode", 9, 15 100 110 7, tab 400
+  check "Send Notice to User only &One Time", 10, 15 111 93 7, tab 400
+  box "General Options", 13, 134 20 130 71, tab 400
+  text "Repeat Away &message:", 14, 139 30 58 7, tab 400
+  combo 15, 198 29 63 100, drop tab 400
+  check "Enable Active&Titlebar Updating" 16, 139 43 83 7, tab 400
+  check "&Save old Titlebar and replace on Back Mode", 17, 139 53 115 7, tab 400
+  text "Activate Auto &IdleAway:", 18, 139 65 58 7, tab 400
+  combo 19, 198 64 63 100, drop tab 400
+  check "Set to Back Mode on &Channel Input", 20, 139 77 118 7, tab 400
+  box "EventLog Options", 21, 134 87 130 36, tab 400
+  check "Enable &Logging", 22, 139 97 48 7, tab 400
+  text "(See Tools menu for utilities)", 90, 190 97 68 7, tab 400
+  edit "", 25, 139 109 74 11, autohs tab 400
+  button "Choose &Folder...", 26, 216 109 45 11, tab 400
+  box "Sound Events", 27, 10 20 254 103, tab 401
+  text "Choose sound to play for the event:", 28, 15 30 100 7, tab 401
+  text "AwayPager >>", 29, 15 43 35 7, tab 401
+  button "No Sound", 30, 53 41 160 11, tab 401
+  button "Preview", 31, 220 41 35 11, tab 401
+  text "AwayLog >>", 32, 15 63 35 7, tab 401
+  button "No Sound", 33, 53 61 160 11, tab 401
+  button "Preview", 34, 220 61 35 11, tab 401
+  box "AwayNick Options", 35, 10 80 254 43, tab 401
+  check "I want to change my &nickname to", 36, 15 90 90 7, tab 401
+  combo 37, 105 89 73 40, limit 20 drop edit tab 401
+  text "when I set to Away Mode", 38, 180 90 70 7, tab 401
+  text "Tip: You can use @me in the nickname field to be replaced by your your nickname", 39, 15 101 240 7, tab 401
+  check "I&dentify to NickServ with this password on return:", 40, 15 112 125 7, tab 401
+  edit "", 41, 140 111 43 10, pass tab 401
+  check "Enable ''Quiet Identifying''", 42, 190 112 70 7, tab 401
+  box "Message Themes", 43, 10 20 254 103, tab 402
+  text "AwaySystem lets you change how the message looks to the channel", 44, 15 30 190 7, tab 402
+  button "Theme &Help", 12, 215 28 40 11, tab 402
+  text "", 77, 15 40 140 7, tab 402
+  text "Available &Themes:", 46, 15 50 45 7, tab 402
+  list 47, 15 58 70 70, vsbar tab 402
+  button "Ne&w", 11, 90 63 35 10, tab 402
+  button "<< A&dd", 48, 90 75 35 12, tab 402
+  button "&Remove >>", 49, 90 90 35 12, tab 402
+  check "Use /am&e", 84, 90 110 35 7, tab 402
+  text "Theme &Name:", 54, 135 50 35 7, tab 402
+  edit "", 55, 171 48 90 12, limit 25 tab 402
+  text "&Away Mode message:", 50, 135 65 100 7, tab 402
+  edit "", 51, 135 75 127 12, autohs tab 402
+  text "&Back Mode message:", 52, 135 95 100 7, tab 402
+  edit "", 53, 135 105 127 12, autohs tab 402
+  box "Preset Away Messages", 56, 10 20 254 103, tab 403
+  text "AwaySystem lets you configure preset Away messages", 57, 15 30 245 7, tab 403
+  text "Current &Presets:", 58, 15 45 45 7, tab 403
+  list 59, 15 55 70 74, vsbar tab 403
+  button "Ne&w", 78, 90 63 35 10, tab 403
+  button "<< A&dd", 60, 90 75 35 12, tab 403
+  button "&Remove >>", 61, 90 90 35 12, tab 403
+  text "Preset &Name:", 82, 135 55 35 7, tab 403
+  edit "", 83, 171 53 90 12, autohs limit 25 tab 403
+  text "&Away message: (100 character limit)", 62, 135 70 100 7, tab 403
+  edit "", 63, 135 80 127 30, multi limit 100 tab 403
+  box "RandomAway Configuration", 64, 10 20 254 103, tab 404
+  text "File configuration for RandomAway messages", 65, 15 30 155 7, tab 404
+  text "Click the button below to choose a text file, or click New to create one", 66, 15 42 245 7, tab 404
+  button "RandomAway Help", 67, 180 29 75 11, tab 404
+  text "Use this file for random messages:", 68, 15 56 80 7, tab 404
+  button "Disable RandomAway", 69, 100 54 130 12, tab 404
+  button "&New", 70, 232 54 28 12, tab 404
+  box "Miscellaneous Options", 71, 10 70 254 53, tab 404
+  check "Disable AwaySystem CTCP &VERSION Reply", 73, 15 80 115 7, tab 404
+  check "Disable Alert/&Error Dialogs, Use /echo", 74, 15 90 123 7, tab 404
+  check "Disable Away &Message Remembering", 85, 15 100 123 7, tab 404
+  check "Disable Show Last &Preferences Tab", 75, 15 110 115 7, tab 404
+  check "Disable Away&Nick Remembering", 76, 150 85 87 7, tab 404
+  check "Disable IdleAway Warning Dialog", 87, 150 95 90 7, tab 404
+  check "&Deop on Away Mode", 91, 150 105 65 7, tab 404
+  icon 503, 5 134 12 12
+  button "OK", 500, 155 134 35 12, OK Default
+  button "Cancel", 501, 195 134 35 12, Cancel
+  button "Apply", 502, 233 134 35 12
+  box "", 302, 0 148 273 14
+  box "", 303, 1 149 202 12
+  text "Welcome to AwaySystem 3", 304, 2 153 200 7
+  box "", 305, 204 149 68 12
+  text "", 306, 205 153 66 7
+}
+on *:Dialog:asconf:init:0:{
+  if ($asrini(lastviewedtab)) && ($asrini(disablelasttab) != 1) { .timer 1 0 did -c $dname $asrini(lastviewedtab) }
+  ascombo
+  if ($exists($scriptdirashelp.msg) == $false) { did -b $dname 12,67 }
+  if ($exists($shortfn($scriptdirmmircs.bmp))) { did -g $dname 503 $shortfn($scriptdirmmircs.bmp) }
+  if ($asrini(prefhidestatus))  { did -h $dname 302,303,304,305,306 | did -u $dname 208 | dialog -sb $dname -1 -1 270 150 }
+  if ($asrini(prefhidestatus) != 1) { did -v $dname 302,303,304,305,306 | did -c $dname 208 | dialog -sb $dname -1 -1 270 159 }
+  doasprefinit
+}
+on *:Dialog:asconf:sclick:2:{
+  if ($did(2).state) { did -e $dname 3,4 }
+  else { did -b $dname 3,4 }
+}
+on *:Dialog:asconf:sclick:6:{
+  if ($did(6).state) { did -e $dname 7,8,86 }
+  if ($did(6).state) && (Away !isin %asawaymode) { did -e $dname 9 }
+  if ($did(6).state) && ($did(9).state) && (Away !isin %asawaymode) { did -e $dname 10 }
+  if ($did(6).state == 0) { did -b $dname 7,8,9,10,86 }
+}
+on *:Dialog:asconf:sclick:9:{
+  if ($did(9).state) { did -e $dname 10 }
+  else { did -b $dname 10 }
+}
+on *:DIALOG:asconf:sclick:11:{ did -rn $dname 55,51,53 | did -u $dname 47 | did -c $dname 84 | did -e $dname 48,49,84  | did -f $dname 55 }
+on *:DIALOG:asconf:sclick:12:{ awaysyshlp 295 }
+on *:Dialog:asconf:sclick:16:{
+  if ($did(16).state) { did -e $dname 17 }
+  else { did -b $dname 17 }
+}
+on *:Dialog:asconf:menu:24:.timer 1 0 clearawaysystemlog
+on *:Dialog:asconf:sclick:26:.timer 1 0 aslogfolder
+on *:DIALOG:asconf:sclick:30:{
+  if ($did(30) == Default Beep) { .timer 1 0 aspagersndselect }
+  else {
+    if ($did(30) == No Sound) { did -a $dname 30 Default Beep }
+    if ($did(30) != Default Beep) { did -a $dname 30 No Sound }
+  }
+}
+on *:DIALOG:asconf:sclick:31:{ 
+  if ($isfile($did(30))) { splay $shortfn($did(30)) }
+  else { if ($did(30) == Default Beep) { beep 1 } }
+}
+on *:DIALOG:asconf:sclick:34:{ 
+  if ($isfile($did(33))) { splay $shortfn($did(33)) }
+  else { if ($did(33) == Default Beep) { beep 1 } }
+}
+on *:DIALOG:asconf:sclick:33:{
+  if ($did(33) == Default Beep) { .timer 1 0 aslogsndselect }
+  else {
+    if ($did(33) == No Sound) { did -a $dname 33 Default Beep }
+    if ($did(33) != Default Beep) { did -a $dname 33 No Sound }
+  }
+}
+on *:Dialog:asconf:sclick:36:{
+  if ($did(36).state) { did -e $dname 37 }
+  if ($did(36).state == 0) { did -b $dname 37 }
+}
+on *:Dialog:asconf:sclick:40:{
+  if ($did(40).state) { did -e $dname 41 }
+  else { did -b $dname 41 }
+}
+on *:DIALOG:asconf:dclick:47:{ aswini selectedtheme $did(47).sel | did -a $dname 77 Current Theme: $asgetthemename }
+on *:DIALOG:asconf:sclick:47:{
+  if ($did(47).sel == 1) {
+    did -ram $dname 55 %name2
+    did -ram $dname 51 $asshowdefaway
+    did -ram $dname 53 $asshowdefback
+    did -c $dname 84 | did -b $dname 48,49,84
+  }
+  else {
+    did -ram $dname 55 $replace($themesini($calc($did(47).sel - 1)),±,$chr(32))
+    did -ra $dname 51 $astrini($calc($did(47).sel - 1),awaymsg)
+    did -ra $dname 53 $astrini($calc($did(47).sel - 1),backmsg)
+    if ($astrini($calc($did(47).sel -1),cmd)) { did -c $dname 84 }
+    if ($astrini($calc($did(47).sel -1),cmd) == 0) { did -u $dname 84 }
+    did -n $dname 51,53 | did -e $dname 48,49,84
+  }
+}
+on *:DIALOG:asconf:sclick:48:{
+  if ($did(55) == $null) { .timer 1 0 awaysyserror Theme name field is blank. | did -f $dname 55 | return }
+  if ($did(51) == $null) { .timer 1 0 awaysyserror Away mode Message field is blank. | did -f $dname 51 | return }
+  if ($did(53) == $null) { .timer 1 0 awaysyserror Back mode Message field is blank. | did -f $dname 53 | return }
+  if ([ isin $did(55)) || (] isin $did(55)) { .timer 1 0 awaysyserror $chr(93) or $chr(91) are not allowed in 'Theme Name' | did -rf $dname 55 | return }
+  if ($strip($did(55)) == %name2) { .timer 1 0 awaysyserror Can't replace theme ' $+ %name2 $+ ' | did -rf $dname 55 | return }
+  else {
+    if ($did(55) == $did(47,$did(47).sel)) { astwini $calc($did(47).sel - 1) awaymsg $did(51) | astwini $calc($did(47).sel - 1) backmsg $did(53) | astwini $calc($did(47).sel -1) cmd $did(84).state }
+    else { astwini2 $replace($strip($did(55)),$chr(32),±) awaymsg $did(51) | astwini2 $replace($strip($did(55)),$chr(32),±) backmsg $did(53) | astwini2 $replace($strip($did(55)),$chr(32),±) cmd $did(84).state | did -a $dname 47 $strip($did(55)) | did -c $dname 47 $did(47).lines | did -m $dname 55 }
+  }
+}
+on *:DIALOG:asconf:sclick:49:{ if ($did(47,$did(47).sel) != $null) { .timer 1 0 asthemedel } }
+on *:DIALOG:asconf:sclick:59:{
+  did -ram $dname 83 $replace($ini(awaysys.ini,Presets,$did(59).sel),±,$chr(32))
+  did -ra $dname 63 $asprini($did(59).sel)
+}
+on *:DIALOG:asconf:sclick:60:{
+  if ($did(83) == $null) { .timer 1 0 awaysyserror Preset name field is blank | did -f $dname 83 | return }
+  if ($did(63) == $null) { .timer 1 0 awaysyserror Away Message field is blank | did -f $dname 63 | return }
+  if ([ isin $did(83)) || (] isin $did(83)) { .timer 1 0 awaysyserror $chr(93) or $chr(91) are not allowed in 'Preset Name' | did -rf $dname 83 | return }
+  else {
+    did -m $dname 83
+    if ($did(83) == $did(59,$did(59).sel)) { aspwini $did(59).sel $did(63) }
+    else { writeini -n awaysys.ini Presets $replace($strip($did(83)),$chr(32),±) $did(63) | did -a $dname 59 $strip($did(83)) | did -c $dname 59 $did(59).lines }
+} }
+on *:DIALOG:asconf:sclick:61:{ if ($did(59,$did(59).sel) != $null) { asprmini $did(59).sel | did -rn $dname 83,63 | did -d $dname 59 $did(59).sel } }
+on *:DIALOG:asconf:sclick:67:{ awaysyshlp 393 }
+on *:DIALOG:asconf:sclick:69:{
+  if ($did(69) == Disable RandomAway) { .timer 1 0 asrandomawaysel }
+  else { did -a $dname 69 Disable RandomAway | did -a $dname 70 &New }
+}
+on *:DIALOG:asconf:sclick:70:{ 
+  if ($exists(randomaway.txt) != $true) && ($did(69) == Disable RandomAway) { did -a $dname 69 $mircdir $+ randomaway.txt | write randomaway.txt RandomAway file. Each new line is a new message. See the AwaySystem Help documentation. | run notepad " $+ $mircdirrandomaway.txt $+ " }
+  else {
+    if ($exists(randomaway.txt) == $true) && ($did(69) == Disable RandomAway) { did -a $dname 69 $mircdir $+ randomaway.txt | run notepad " $+ $mircdir $+ randomaway.txt $+ " }
+    else { run notepad " $+ $did(69) $+ " }
+  }
+  did -a $dname 70 &Open
+}
+on *:DIALOG:asconf:sclick:78:{ did -r $dname 83,63 | did -u $dname 59 | did -f $dname 83 | did -n $dname 83 }
+on *:Dialog:asconf:menu:207:awaysystemlog
+on *:Dialog:asconf:menu:208:{
+  if ($asrini(prefhidestatus)) { did -v $dname 302,303,304,305,306 | did -c $dname 208 | dialog -sb $dname -1 -1 270 159 | aswini prefhidestatus 0 }
+  else { did -h $dname 302,303,304,305,306 | did -u $dname 208 | dialog -sb $dname -1 -1 270 150 | aswini prefhidestatus 1 }
+}
+on *:Dialog:asconf:menu:201:dialog -x $dname
+on *:Dialog:asconf:menu:209:.timer 1 0 asreset.confirm
+on *:DIALOG:asconf:menu:213:.run mailto: InvincibleScript@yahoo.com
+on *:DIALOG:asconf:menu:216:.timer 1 0 awaysysabout
+on *:DIALOG:asconf:menu:218:.timer 1 0 clearawaysysnicks
+on *:Dialog:asconf:sclick:400:aswini lastviewedtab 400 | did -a $dname 304 Main script configuration tab
+on *:Dialog:asconf:sclick:401:aswini lastviewedtab 401 | did -a $dname 304 Sound events and AwayNick Configuration
+on *:Dialog:asconf:sclick:402:aswini lastviewedtab 402 | did -a $dname 304 Themes for public away and back messages
+on *:Dialog:asconf:sclick:403:aswini lastviewedtab 403 | did -a $dname 304 Preset away messages for 'no typing' aways
+on *:Dialog:asconf:sclick:404:aswini lastviewedtab 404 | did -a $dname 304 RandomAway message configuration and Miscellaneous Options
+on *:DIALOG:asconf:sclick:500:asprefok
+on *:DIALOG:asconf:sclick:502:asprefok | did -a $dname 304 Options saved | did -a $dname 77 Current Theme: $asgetthemename | updaslogsize 
+dialog awaysyserror {
+  title "Away System Alert"
+  icon graph/awaysys.ico
+  size -1 -1 180 52 
+  option dbu
+  icon 2, 10 10 20 20
+  text "", 3, 25 15 140 7, center
+  button "&OK", 1, 75 35 35 12, ok default
+}
+on *:DIALOG:awaysyserror:init:0:{
+  if ($exists($shortfn($scriptdiryield.ico))) { did -g $dname 2 $shortfn($scriptdiryield.ico) }
+  did -a $dname 3 %awaysyserror | unset %awaysyserror
+}
+dialog asawaydiag { 
+  title "Go into Away Mode"
+  icon graph/awaysys.ico
+  size -1 -1 175 52 
+  option dbu
+  text "&Away message:", 202, 5 7 37 7
+  combo 1, 43 5 118 80, drop edit
+  text "0", 4, 163 7 13 7
+  check "Away&Pager on", 2, 5 21 44 7 
+  check "Away&Log on", 3, 58 21 39 7, 3state
+  button "OK", 101, 5 35 27 12, OK default
+  button "Cancel", 102, 38 35 27 12, cancel
+  check "&Nick:", 103, 75 38 22 7
+  combo 105, 98 36 73 40, drop edit
+  text "(", 106, 105 21 7 7
+  check "= No Notice Logging)", 104, 107 21 60 7, 3state
+} 
+on *:DIALOG:asawaydiag:init:0:{ 
+  if (%asqaway) { dialog -t $dname Go into StealthAway Mode | did -h $dname 103,105 }
+  if ($awaypager == on) { did -c $dname 2 } 
+  if ($awaylogging == on) { did -c $dname 3 }
+  if ($awaynotices == off) && ($awaylogging == on) { did -cu $dname 3 }
+  if ($asrini(awaynick)) { did -ac $dname 105 $asrini(awaynick) | did -c $dname 103 }
+  if ($asrini(awaynick) == $null) { did -b $dname 105 }
+  if ($asrini(awaynick) == $null) && ($asrini(oldnick1)) { did -bac $dname 105 $asrini(oldnick1) }
+  loadasnicks $dname 105
+  did -cu $dname 104
+  var %presets = 1
+  var %totalpresets $ini(awaysys.ini,Presets,0)
+  while (%presets <= %totalpresets) {
+    did -a $dname 1 Preset: $replace($ini(awaysys.ini,Presets,%presets),±,$chr(32))
+    inc %presets
+  }
+  if ($asrini(randomaway) != Disable RandomAway) { did -a $dname 1 Use RandomAway Message }
+  did -a $dname 1 
+  loadawaymsg $dname
+}
+on *:DIALOG:asawaydiag:sclick:1:{
+  if ($did(1) != Use RandomAway Mesasge) && (Preset: isin $did(1)) { did -ac $dname 1 $asprini($did(1).sel) }
+  else { if ($exists($shortfn($asrini(randomaway)))) && ($did(1) == Use RandomAway Message) { did -ac $dname 1 $read $shortfn($asrini(randomaway)) } }
+  asdoeditboxchk 
+}
+on *:DIALOG:asawaydiag:edit:1:{ asdoeditboxchk }
+on *:DIALOG:asawaydiag:sclick:101:{ 
+  awaystatus.set
+  if ($did(2).state) { aswini awaypager 1 }
+  if ($did(2).state == 0) { aswini awaypager 0 }
+  if ($did(3).state) { aswini awaylogging 1 | aswini awaynotices 1 }
+  if ($did(3).state == 0) { aswini awaylogging 0 | aswini awaynotices 0 }
+  if ($did(3).state == 2) { aswini awaylogging 1 | aswini awaynotices 0 }
+  if ($did(103).state) && ($did(105)) && ($asrini(awaynick)) { aswini oldnick2 $asrini(awaynick) | aswini awaynick $strip($did(105)) }
+  if ($did(103).state == 0) || ($did(105) == $null) && ($asrini(awaynick)) { aswini oldnick2 $asrini(awaynick) | asrmini awaynick }
+  if ($did(103).state) && ($did(105)) { aswini awaynick $strip($did(105)) }
+  if ($did(1)) { %asawaymsg = $left($did(1),100) }
+  if ($did(1) == $null) { %asawaymsg = Away }
+  if (%asqaway) { set %asawaymode StealthAway }
+  if (%asqaway == $null) { set %asawaymode Away }
+  if ($server == $null) { asecho Setting to Offline %asawaymode mode ( $+ $cxs(1) $+ %asawaymsg $+  $+ $cxs(2) $+ ) - Pager: $+ $cxs(1) $+ $awaypager  $+ $cxs(2) $+ Log: $+ $cxs(1) $+ $awaylogging  $+ $cxs(2) $+ You will be set to Online %asawaymode when you connect to IRC. }
+  assetaway
+  writenicks $strip($did(105))
+  writeawaymsg $did(1)
+  unset %asqaway
+}
+on *:DIALOG:asawaydiag:sclick:102:{ unset %asqaway }
+on *:DIALOG:asawaydiag:sclick:104:{ did -cu $dname 104 }
+on *:DIALOG:asawaydiag:sclick:103:{
+  if ($did(103).state == 0) { did -b $dname 105 }
+  else { did -e $dname 105 }
+}
+dialog asmsgchng { 
+  title "Change Away Message"
+  icon graph/awaysys.ico
+  size -1 -1 175 42 
+  option dbu
+  text "&New message:", 200, 5 7 35 7
+  combo 1, 43 5 118 80, edit drop
+  text "0", 4, 163 7 13 7
+  button "OK", 101, 5 25 27 12, OK default disable
+  button "Cancel", 102, 38 25 27 12, cancel
+}
+On *:DIALOG:asmsgchng:init:0:{
+  var %presets = 1
+  var %totalpresets $ini(awaysys.ini,Presets,0)
+  while (%presets <= %totalpresets) {
+    did -a $dname 1 Preset: $replace($ini(awaysys.ini,Presets,%presets),±,$chr(32))
+    inc %presets
+  }
+  if ($asrini(randomaway) != Disable RandomAway) { did -a $dname 1 Use RandomAway Message }
+  did -a $dname 1 
+  loadawaymsg $dname
+}
+on *:DIALOG:asmsgchng:sclick:1:{
+  if ($did(1) != Use RandomAway Mesasge) && (Preset: isin $did(1)) { did -ac $dname 1 $asprini($did(1).sel) }
+  else { if ($exists($shortfn($asrini(randomaway)))) && ($did(1) == Use RandomAway Message) { did -ac $dname 1 $read $shortfn($asrini(randomaway)) } }
+  asdoeditboxchk | did -e $dname 101
+}
+On *:DIALOG:asmsgchng:edit:1:{
+  if ($did(1)) { did -e $dname 101 }
+  else { did -b $dname 101 }
+  asdoeditboxchk
+}
+On *:DIALOG:asmsgchng:sclick:101:{ writeawaymsg $did(1) | asredoawaymsg $left($did(1),100) }
+dialog asabout {
+  title "About Away System"
+  icon graph/awaysys.ico
+  size -1 -1 180 135
+  option dbu
+  button "OK", 1, 140 116 35 12, ok default
+  icon 11, 5 10 40 40
+  text "", 2, 50 10 120 7
+  text "", 3, 50 20 120 7
+  text "", 4, 50 30 120 7
+  box "", 5, -1 55 182 55
+  text "", 6, 10 65 160 7
+  text "", 7, 10 75 160 7
+  text "", 8, 10 85 160 7
+  text "", 9, 10 95 160 7
+  text "", 10, 50 40 100 7
+}
+on *:DIALOG:asabout:init:0:{ 
+  did -g $dname 11 $shortfn(graph/stat.bmp)
+  did -a $dname 2 $asversion
+  did -a $dname 3 Script date: 21 August 2002
+  did -a $dname 4 Scripter: %auname
+  did -a $dname 6 Description: Away System for mIRC
+  did -a $dname 7 AwayNicks stored: $ini(awaysys.ini,AwayNicks,0) - Away messages stored: $ini(awaysys.ini,Awaymsgs,0)
+  did -a $dname 8 mIRC $+ $bits $version running on Windows $os
+  did -a $dname 9 Script installed in $shortfn($scriptdir)
+  did -a $dname 10 $assite
+}
+on *:DIALOG:asidleaway:sclick:1:{ unset %astimeremaining | .timerascountdown off | resetidle | .timerIdleAway 0 10 ascheckidle }
+on *:DIALOG:asidleaway:sclick:2:{ unset %astimeremaining | .timerascountdown off | asdoidleaway }
+alias -l asprefok {
+  if (Away !isin %asawaymode) {
+    if ($did(36).state == 0) && ($asrini(awaynick)) { aswini oldnick1 $asrini(awaynick) | asrmini awaynick }
+    if ($did(36).state)  && ($did(37)) { aswini awaynick $strip($did(37)) }
+    if ($did(2).state) { aswini awaypager 1 }
+    if ($did(2).state == 0) { aswini awaypager 0 }
+    if ($did(6).state) { aswini awaylogging 1 }
+    if ($did(6).state == 0) { aswini awaylogging 0 }
+    if ($did(7).state) { aswini awaynotices 1 }
+    if ($did(7).state == 0) { aswini awaynotices 0 }
+    if ($did(9).state) { aswini notify 1 }
+    if ($did(9).state == 0) { aswini notify 0 }
+    if ($did(10).state) { aswini sendnotices 1 }
+    if ($did(10).state == 0) { aswini sendnotices 0 }
+    aswini awaytimer $asdroptime($did(15).sel)
+    aswini idleaway $asdroptime($did(19).sel)
+    writenicks $strip($did(37))
+    if ($did(47).sel) { aswini selectedtheme $did(47).sel }
+    if ($timer(IdleAway) == $null) && ($asrini(idleaway) > 0) { beginasidlechck }
+    if ($did(19).sel == 17) { .timeridleaway off }
+    if ($did(47).sel != 1) && ($did(47).sel) && ($did(55) == $did(47,$did(47).sel)) { astwini $calc($did(47).sel - 1) awaymsg $did(51) | astwini $calc($did(47).sel - 1) backmsg $did(53) | astwini $calc($did(47).sel - 1) cmd $did(84).state }
+  }
+  if (Away isin %asawaymode) {
+    if ($did(2).state == 0) { %asawaypager.status = off }
+    if ($did(2).state) { %asawaypager.status = on }
+    if ($did(6).state == 0) { %asawaylogging.status = off }
+    if ($did(6).state) { %asawaylogging.status = on }
+    if ($did(7).state) { %asawaynotices.status = on }
+    if ($did(7).state == 0) { %asawaynotices.status = off }
+  }
+  if ($did(91).state) { aswini awaydeop 1 }
+  if ($did(91).state == 0) { aswini awaydeop 0 }
+  if ($did(59).sel) && ($did(83) == $did(59,$did(59).sel)) { aspwini $did(59).sel $did(63) }
+  if ($did(3).state) { aswini ctcppage 1 }
+  if ($did(3).state == 0) { aswini ctcppage 0 }
+  if ($did(4).state) { aswini ctcpreply 1 }
+  if ($did(4).state == 0) { aswini ctcpreply 0 }
+  if ($did(8).state) { aswini awayactions 1 }
+  if ($did(8).state == 0) { aswini awayactions 0 }
+  if ($did(16).state) { aswini awaytbar 1 }
+  if ($did(16).state == 0) { aswini awaytbar 0 }
+  if ($did(17).state) { aswini savetbar 1 }
+  if ($did(17).state == 0) { aswini savetbar 0 }
+  if ($did(20).state) { aswini asinputback 1 }
+  if ($did(20).state == 0) { aswini asinputback 0 }
+  if ($did(22).state) { aswini awaysystem.log 1 }
+  if ($did(22).state == 0) { aswini awaysystem.log 0 }
+  if ($did(30) != No Sound) { aswini awaypager.snd $did(30) }
+  if ($did(30) == No Sound) { asrmini awaypager.snd }
+  if ($did(33) != No Sound) { aswini awaylog.snd $did(33) }
+  if ($did(33) == No Sound) { asrmini awaylog.snd }
+  if ($did(40).state) && ($did(41)) { aswini asidno $strip($did(41)) }
+  if ($did(40).state == 0) { asrmini asidno }
+  if ($did(42).state) { aswini asquietid 1 }
+  if ($did(42).state == 0) { aswini asquietid 0 }
+  if ($did(73).state) { aswini disableversionreply 1 }
+  if ($did(73).state == 0) { asrmini disableversionreply }
+  if ($did(74).state) { aswini disableerrordialog 1 }
+  if ($did(74).state == 0) { asrmini disableerrordialog }
+  if ($did(75).state) { aswini disablelasttab 1 }
+  if ($did(75).state == 0) { asrmini disablelasttab }
+  if ($did(76).state) { aswini disableawaynick 1 }
+  if ($did(76).state == 0) { asrmini disableawaynick }
+  if ($did(85).state) { aswini disableawaymsg 1 }
+  if ($did(85).state == 0) { asrmini disableawaymsg }  
+  if ($did(86).state) { aswini closemsg 1 }
+  if ($did(86).state == 0) { aswini closemsg 0 }
+  if ($did(87).state) { aswini disableidledlg 1 }
+  if ($did(87).state == 0) { asrmini disableidledlg }
+  aswini randomaway $did(69)
+  aswini awaysystemlog.log $did(25) $+ awaysys.log
+}
+alias ascombo {
+  did -a $dname 15,19 After 1 Minute
+  did -a $dname 15,19 After 2 Minutes
+  did -a $dname 15,19 After 3 Minutes
+  did -a $dname 15,19 After 5 Minutes
+  did -a $dname 15,19 After 10 Minutes
+  did -a $dname 15,19 After 15 Minutes
+  did -a $dname 15,19 After 20 Minutes
+  did -a $dname 15,19 After 25 Minutes
+  did -a $dname 15,19 After 30 Minutes
+  did -a $dname 15,19 After 45 Minutes
+  did -a $dname 15,19 After 1 Hour
+  did -a $dname 15,19 After 2 Hours
+  did -a $dname 15,19 After 3 Hours
+  did -a $dname 15,19 After 4 Hours
+  did -a $dname 15,19 After 5 Hours
+  did -a $dname 15,19 After 6 Hours
+  did -ac $dname 15,19 Never
+}
+alias asimport {
+  set %asawaymode Back
+  if ($asrini(selectedtheme) == $null) { aswini selectedtheme 1 }
+  if ($asrini(awaypager) == $null) { aswini awaypager 1 }
+  if ($asrini(awaylogging) == $null) { aswini awaylogging 1 }
+  if ($asrini(awaynotices) == $null) { aswini awaynotices 1 }
+  if ($asrini(asinputback) == $null) { aswini asinputback 0 }
+  if ($asrini(asnickpword)) { aswini asidno $asrini(asnickpword) | asrmini asnickpword }
+}
+alias asdiagver { return 3.00.2032 }
+alias backmode {
+  if (%asawaymode == Back) { asecho You're already in Back Mode }
+  else { assetback }
+}
+alias awaymode {
+  if (Away isin %asawaymode) { asecho You're already in Away Mode }
+  else {
+    if ($1 == $null) { asecho Usage: /awaymode [-sp] <message/preset> }
+    else {
+      if ($1 == -s) { 
+        if ($2) { set %asawaymsg $left($2-,100) }
+        else { set %asawaymsg Away }
+        set %asawaymode StealthAway
+      }
+      else {
+        if ($1 == -p) {
+          if ($2 == $null) {
+            var %presets = 1
+            var %totalpresets $ini(awaysys.ini,Presets,0)
+            asecho $iif(%totalpresets,Listing presets...,There are no presets) 
+            while (%presets <= %totalpresets) {
+              echo 4 -a %presets $+ . $replace($ini(awaysys.ini,Presets,%presets),±,$chr(32)) $+ : $asprini(%presets)
+              inc %presets
+            }
+            linesep
+            return
+          }
+          if ($asprini($2) == $null) || ($2 !isnum)  { asecho Preset does not exist or is invalid! | return }
+          set %asawaymsg $asprini($2)
+          set %asawaymode Away
+        }
+        else {
+          set %asawaymsg $left($1-,100)
+          set %asawaymode Away
+        }
+      }
+      awaystatus.set
+      writeawaymsg %asawaymsg
+      if ($asrini(awaynick)) { aswini oldnick2 $asrini(awaynick) }
+      assetaway
+      if ($server == $null) { asecho Setting to Offline %asawaymode mode (4 $+ %asawaymsg $+ ) - AwayPager: $awaypager $+ , AwayLog: $awaylogging $+ . You will be set to Online %asawaymode when you reconnect. }
+    }
+  }
+}
+alias -l writeawaymsg { 
+  if ($asrini(disableawaymsg) != 1) {
+    var %totalmsg = $ini(awaysys.ini,Awaymsgs,0)
+    var %msgnum = 1
+    var %param = $left($1-,100)
+    while (%msgnum <= $calc(%totalmsg + 1)) {
+      if ($asreadmsg(%msgnum) == %param) { break }
+      if ($asreadmsg(%msgnum) == $null) { writeini -n awaysys.ini Awaymsgs $calc($ini(awaysys.ini,Awaymsgs,0) + 1) %param | break }
+      inc %msgnum
+    }
+  }
+}
+alias -l asthemedel {
+  if ($?!="Are you sure you want to delete this theme?") {
+    var %dname = asconf
+    astrmini $calc($did(%dname,47).sel - 1) | did -d %dname 47 $did(%dname,47).sel 
+    aswini selectedtheme 1
+    did -c %dname 47 1
+    did -ra %dname 55 %name2
+    did -ra %dname 51 $asshowdefaway
+    did -ra %dname 53 $asshowdefback
+    did -c %dname 84 | did -m %dname 55,51,53 | did -b %dname 48,49,84
+    did -a %dname 77 Current Theme: $asgetthemename
+  }
+  dialog -v asconf
+}
+menu @AwayLog,@AwayPager,@AwaySystem {
+  $iif($exists(awaysys.ini) == $false || %asawaymode == $null,Repair config file):asresetdefault
+  $iif($active != @AwaySystem && $ascheckini,Clear Window &Buffer):clear
+  $iif($active != @AwaySystem && $ascheckini,AwaySystem Log&Viewer):awaysystemlog
+  $iif($active == @AwaySystem && $ascheckini,&Clear Away System Logs):clearawaysystemlog
+  -
+  $iif($ascheckini,Away System &Preferences):awaysys.config
+  $iif($exists($shortfn($scriptdirashelp.msg)),&Help!):awaysyshlp
+}
+
+;___________________________________________________________________________
+; Copyright © 2000 - 2003 logos,scripts & codes. All rights reserved
+; Reproduction/distribution/alteration of this material in part or in full without prior consent is forbidden
+; Script author: Xtry on dalnet.
+; mailto: InvincibleScript@yahoo.com
+;¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯

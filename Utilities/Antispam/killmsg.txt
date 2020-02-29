@@ -1,0 +1,6 @@
+[ma/net]:Network advertising is not allowed on this network.
+[ma/web]:Website advertising is not allowed on this network.
+[ma/inv]:Channel advertising is not allowed on this network, if you continue the channel may be closed.
+[exp/bd]:Please do not attempt to exploit users
+[exp/vrs]:You are autosending viruses to other users. Please visit http://www.nohack for help.
+[exp/bd]:Do not attempt to exploit other users via CTCP backdoors.
