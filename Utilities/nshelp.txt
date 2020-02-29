@@ -1,0 +1,53 @@
+• Register :
+To register a nickname in DALnet you must have a valid email and it has 2 steps , the 1st syntax is /nickserv register password email ..ie : /nickserv register 4nyG00dP4ss Joe@yahoo.com . after that a mail will come into your inbox , and you must read it then do 2nd step , type /nickserv AUTH nickname AuthCode.
+
+• Identify :
+To identify a nickname you can use /nickserv identify password , or simply type /identify password , also you can identify to another nickname without changing your current nickname by typing /nickserv identify nickname password.
+
+• Drop :
+Dropping a nickname has 2 steps , first ..type /nickserv drop nickname ..then you will receive a drop code from nickserv , then type /nickserv drop nickname DropCode.
+
+• Info :
+To get some information on a nickname you can use /nickserv info nickname.
+
+• Acc :
+To check acc/acess of a nickname you can use /nickserv acc nickname , and to add it into your access list you can use /nickserv acc add Hostmask , to delete one of it type /nickserv acc del Hostmask , to list out type /nickserv acc list , and to clear the list you can type /nickserv acc wipe.
+
+• Recover :
+To recover your nickname from someone who using it , you can use /nickserv recover nickname password.
+
+• Release :
+To release your nickname from the using of Enforcer you can use /nickserv release nickname password.
+
+• Sendpass :
+if you forgot your nickname password but you remember the email for that nickname , you can use /nickserv sendpass nickname email ..note : Mailblock setting must be Off.
+
+• Ghost :
+To ghost a nickname you can use /nickserv ghost nickname password.
+
+• Password :
+To change your nickname password , you can type /nickserv set passwd currentpass newpass.
+
+• Enforce :
+To set your nickname enforced , you can type /nickserv set enforce on ..so nickserv will ask you the nickname password everytime you are login into the nickname, you must type the password or change into Guest in 60 seconds. and if you want to turn it off , type /nickserv set enforce off
+
+• URL :
+To set your URL on your nickname type /nickserv set URL URLHere ..ie : type /nickserv set URL http://www.Joe23.com , if you want this setting to off you can use /nickserv set url.
+
+• Email :
+To change your nickname's email there are 2 steps , 1st type /nickserv set email password NewEmail , then you must check your new email in order to authorise your nickname email , that's the 2nd step.
+
+• Show Email :
+You can show to any user your email in the nickname info , with /nickserv set showemail on , then your email will display on your nickname info. if you want to turn it off type /nickserv set showemail off.
+
+• Mailblock :
+To turn ON your mailblock setting you can type /nickserv set mailblock On , this will disabled the sendpass command ..so carefull if you want to do this ..and to disable this mailblock , you can use /nickserv set mailblock off.
+
+• No Op :
+to enable this option you can type /nickserv set noop on ..so anyone cannot add your nickname into their channel's Op list ..to disable it type /nickserv set noop off.
+
+• No Memo :
+to enable this option you can type /nickserv set nomemo on ..so no one will send you a memo , to disable type /nickserv set nomemo off.
+
+• Note :
+If you were in DALnet and still have questions about Nickserv (Nickname Service) you can type /nickserv help ..and /nickserv help set ..or you can ask it in #DALnetHelp

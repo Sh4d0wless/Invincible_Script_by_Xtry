@@ -1,0 +1,28 @@
+Hours:	h	5
+	hh	05
+	H	17
+	HH	17
+
+Minutes:	n	2
+	nn	02
+
+Seconds:	s	7
+	ss	07
+
+AM/PM:	t	a/p
+	tt	am/pm
+	T	A/P
+	TT	AM/PM
+
+Year:	yy	98
+	yyyy	1998
+
+Month:	m	2
+	mm	02
+	mmm	Feb
+	mmmm	February
+
+Day:	d	1
+	dd	01
+	ddd	Mon
+	dddd	Monday

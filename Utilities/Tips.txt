@@ -1,0 +1,94 @@
+/gtzdalc: Open the Chanserv options dialog to access more Chanserv commands
+/gtzdaln: Open the Nickserv options dialog to access more Nickserv commands
+/gtzdals: Open the Statserv options dialog to access more Statserv commands
+/autoid: Auto Identify
+/authx: Auto Thanks
+/ghostkill: Ghost Killer
+/aoperz: Auto Oper (IRCop Only)
+/aping: Auto Pinger
+/agreetx: Auto Greet
+/xssctxt: Text System
+/gtzwav: Sound System
+/echosys: Echo System
+/dccgtz: DCC Controls
+/nlc: Nicklist Colors
+/tsgtz: Timestamp Styler
+/introx: Introduction Setup
+/kickcounter: Kick Counter
+/aj: Auto Join
+/gtzlagon: Enable Lagbar System
+/gtzlagoff: Disable Lagbar System
+/gtzsctxt: Scripted Text
+/invnot.on: Enable Invite Notifier
+/invnot.off: Disable Invite Notifier
+/gtzprox.en: Enable Proxy Scanner
+/gtzprox.dis: Disable proxy Scanner
+/nsalerton: Enable Netsplit Detector
+/nsalertoff: Disable Netsplit Detector
+/awaysys.config: Away System Configuration
+/memos: Memo Express
+/xtrymemon: Enable Memo Express
+/xtrymemoff: Disable Memo Express
+/scanner: Net Scanner
+/urlc: URL Central
+/emailer: Email Client
+/fservx: File Server Setup
+/userlist: User List
+/sysi: System Info
+/servinfo: Multi Network Info
+/personainx: Personal Info
+/dccinfo: DCC Transfer Info
+/weafor: Weather Forecaster
+/time: Time Info
+/connexhis: Connection History
+/gtzclookup: Country Lookup (use with: /gtzlookup CodeHere)
+/txt2c: Text To Char
+/filetm: File Transfer Manager
+/quoteman: Quote Manager
+/ncpro: Nick Completor
+/check.notify: Notify Viewer
+/kickpl: kicked User List
+/dialist: List Maker
+/aregainn: Auto Regain Nick
+/ip.scan: IP & Nick Finder
+/votebox: Vote Machine
+/chcount: Channel Counter
+/alarmx: Alarm Clock
+/autotm: Auto Timed Message Setup
+/ignore.manager: Ignore Manager
+/show.ignorelist.dialog: Ignore List Dialog
+/seen: Seen System
+/myfavn: Favorite Nicknames
+/myfavc: Favorite Channels
+/fidrop: File Dropper Setup
+/ftpad: FTP Advertisement Setup
+/qdialquit: Quits Editor
+/gamez: Personal Games
+/petz: Funny Pets
+/picplay: Pic Player
+/triv.dlg: Trivia Settings
+/lyrics: Lyrics Finder
+/sketch: Sketch
+/bigfont: Big Fonts Editor
+/gtzcolon: Enable Colors Talker
+/gtzcoloff: Disable Colors Talker
+/secure.query: Secure Query
+/sdecon: Enable Safe Decode
+/sdecoff: Disable Safe Decode
+/as.settings: Antispam Bot Configuration
+/gtz.cpro: Status Protection
+/pp: Personal Flood Protection
+/akick: Channel Protection
+/gtzpp: Script Pass Protection
+/tscan: Trojan Scanner
+/authorx: Authority
+/wingtz: Script Highlight
+/barz: Open Tools Bar
+/tips: Tips & Tricks
+/gtzhelp: Help Center
+/cp: Control Panel
+/connect2: Connector
+/logviews: Log Viewer
+/rprog: Run Programs
+/dfsearchf: Search System
+/dict: Dictionary

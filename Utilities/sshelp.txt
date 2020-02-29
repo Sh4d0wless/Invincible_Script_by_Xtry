@@ -1,0 +1,31 @@
+StatServ is used to give users, IRC Operators, and Admins a glimpse of how the network is performing server<->server-wise and as a whole. We can then use this information to route a server more efficiently in an effort to eliminate lag and poor performance.
+
+• Domain :
+the syntax is /statserv domain Domain_Here , ie : /statserv domain xtry.gtz.net ..this command will give you the statistic of a specific domain
+
+• Host :
+To get a statistic on a specific host you can type /statserv host Host_Here , ie : /statserv host tty10.chicken.com
+
+• Hosts :
+The syntax is /statserv hosts ..it will display a total count of hosts seen
+
+• Login :
+Login for more commands to access Statserv
+
+• Netstats :
+The syntax is /statserv netstats ...This command will display global network statistics
+
+• Servers :
+Using this command will make stats display a list of all servers and their ircd versions. The syntax is /statserv servers
+
+• Server :
+This command is used to show all specific statistics on a particular IRC server. (ie, max clients, "hits", current clients, etc) ..and the syntax is /statserv server Server_Here ..ie : /statserv server vision.kl.my.dal.net
+
+• Stats :
+This command is used to show all specific statistics on a particular IRC server, host, domain. (ie, max clients, "hits", current clients, etc) , the syntax is /statserv stats Server|Host|Domain ..ie : /statserv stats  ttyc6.sadgirl.com
+
+• Up Time :
+This command is used to show your current uptime , the syntax is /statserv uptime
+
+• Note :
+If you were in DALnet and still have questions about Statserv (Statistic Service) you can type /statserv help ..or you can ask it in #DALnetHelp
