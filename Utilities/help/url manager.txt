@@ -1,0 +1,1 @@
+URL Central is helpfull for you to search,browse,set your fave web,etc so you can do that from Invincible. It use a basic command (/url) to launch the site.

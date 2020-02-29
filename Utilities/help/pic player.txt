@@ -1,0 +1,1 @@
+Pic Player helps you /play a *.txt file in the list. You can play it on channel or private window, or in it's own window. When you play it on it's own window, the fonts is set to Fixedsys 9, it's the deafult mIRC font, so it will match with any pictures.

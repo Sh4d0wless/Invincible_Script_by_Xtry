@@ -1,0 +1,1 @@
+File Transfer Manager shows you all your failed transfer files, downloaded & uploaded files. You can run the files from here also (if the file is still in the download folder)

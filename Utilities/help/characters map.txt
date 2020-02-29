@@ -1,0 +1,1 @@
+Characters Map is ASCII Data for all fonts. It contains the codes also.

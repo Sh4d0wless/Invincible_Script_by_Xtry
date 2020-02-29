@@ -1,0 +1,1 @@
+System Info used moo.dll to show you your machine specifications, such as your operating system,cpu,memory,mIRC version,etc. you can display these on your active window.

@@ -1,0 +1,1 @@
+Seen System is a system which help users in the channel to find another user in a specified channel. You can set the channel to respond & not respond from Seen System. You can set the seen trigger also, the default is !seen. Example: !seen Netrix

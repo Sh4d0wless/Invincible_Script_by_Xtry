@@ -1,0 +1,1 @@
+If you enabled Auto Greet it will send a message if a specified nickname join in a specified channel. You can set the nicknames and the channel also, if all channels was selected then it will send auto greet message to all channels you are currently in, and if all nicknames was selected it will send auto greet message to all nicknames.

@@ -1,0 +1,1 @@
+Net Scanner is a scan system for finding such clones,away users & IRCops in a specified channel. You can set the perform command after scanning in the dialog. The script will display the echos (/who) in your active window whenever you are scanning, because i put the raw command displayed in active window.

@@ -1,0 +1,1 @@
+If Invite Notifier was enabled, this will send you a display options dialog everytime a user invite you to a channel. You can choose: Join the channel or reject it. You can set the options in popups.

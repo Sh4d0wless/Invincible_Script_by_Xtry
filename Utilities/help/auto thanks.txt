@@ -1,0 +1,1 @@
+If this option enabled, it will send auto thanks message into channel window when you were opped or voiced. you can use the scripted text style also.

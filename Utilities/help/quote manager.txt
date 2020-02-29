@@ -1,0 +1,1 @@
+Quote Manager helps you to keep the text or files that you'd like to save. you can send it to active window, and double click the text in the list will echo the text line in your active window. It has search command also.

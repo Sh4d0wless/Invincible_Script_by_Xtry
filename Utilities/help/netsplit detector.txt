@@ -1,0 +1,1 @@
+Netsplit Detector will detect from the quit message of users in your channels. if it noticed there was a netsplit, then it will send a netplit alert message to all channels.

@@ -1,0 +1,1 @@
+Alarm Clock helps you to set your personal alarm and it's message. You can onlu put the time in Alarm Clock in HH:mm format (H=Hour,m=minute). Example: (20:35)

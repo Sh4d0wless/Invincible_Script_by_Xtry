@@ -1,0 +1,1 @@
+Echo system is a script's display info, it will display the info into your active window for what was happened in another window. For example, your active window now is in Channel #A1 ,and at the same time you were voiced in the #B2 ,then if you enable the echo system for that event, the script will send an echo msg into your active window telling that "you were voiced in #B2".

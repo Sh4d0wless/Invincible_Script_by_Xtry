@@ -1,0 +1,1 @@
+Auto Timed Message helps you to send message/text to channel in a specified time. You can use it to tell news or something. You can set the message & channel also.

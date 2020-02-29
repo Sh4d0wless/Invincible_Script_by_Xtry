@@ -1,0 +1,2 @@
+Introduction Setup is a dialog & Popup to set your personal informations, such as; Name, Age, Gender, Email, Homepgae, etc.
+So, if someone ask you for your personal infos, you don't need to type it again. You can tell it with Popups.

@@ -1,0 +1,1 @@
+It will automatically kill the ghost nicknames when you were connected, and you can enable/disable it. please note that  in DALnet you can't ghost a nickname unless the nickname was fully registered.

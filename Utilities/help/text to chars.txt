@@ -1,0 +1,1 @@
+Text To Characters is a dialog which can help you translate from a normal text to charcters format.

@@ -1,0 +1,1 @@
+File Server Setup helps you to serve your files in the channels. You set your serve directory, welcome message, and the advertising appearence, choose your drives, etc. Please note that in some networks File serving or sharing files is not tolerated.

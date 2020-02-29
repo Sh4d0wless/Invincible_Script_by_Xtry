@@ -1,0 +1,2 @@
+Kick Counter is a system which count how many you kicks a user (if enabled), it will display in the kick message.
+Also, you can tell to user how many kicks you've made so far.

@@ -1,0 +1,1 @@
+You can configure the Gigantoolz sounds here, so you know what's happening by hearing a sound. You can enable/disable it. Note that the sound might be not play while you playing another sound such as *.mp3,*.mid,etc

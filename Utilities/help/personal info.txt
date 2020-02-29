@@ -1,0 +1,1 @@
+Personal Info is different with Multi Network Info. It only shows you your statistics on your current network, but it's usefull such as your nickname,idle time,hostname,etc.

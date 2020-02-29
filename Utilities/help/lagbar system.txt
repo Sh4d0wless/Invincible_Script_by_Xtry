@@ -1,0 +1,2 @@
+Lagbar System is a scripted window that can tell you how much is your lag time.
+It has 3 methods (Ctcp,Raw,Notice), the default is CTCP. Right click the lagbar system to open other lagbar options.

@@ -1,0 +1,2 @@
+Auto Join will help you in joining specified channel(s) automatically whenever you logged into a specified network.
+It has delay (in seconds), if you put 5 seconds delay, you will joining those specified channels in 5 seconds after you were connected

@@ -1,0 +1,2 @@
+You can set your channel's nicknames list colors with this one. the color of the nicknames also display in the channel.
+You can enable/disable it also.

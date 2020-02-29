@@ -1,0 +1,1 @@
+Time dialog will display you the current time in HH:mm:ss format, current date, mIRC uptime, Idle time, Online time, System uptime. you also can open it from status window popups, click the time/date in main popups there.

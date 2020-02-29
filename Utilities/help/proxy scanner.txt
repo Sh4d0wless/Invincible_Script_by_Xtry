@@ -1,0 +1,1 @@
+Proxy Scanner is a simple system which scan a user who used proxy, and save it to found.txt. You can open the logs, and this system will scan every users who joined the channels.

@@ -1,0 +1,68 @@
+Auto Thanks
+Auto Oper
+Auto Pinger
+Auto Greet
+
+Text System
+Sound System
+Echo System
+Ghost Killer
+DCC Controls
+Nicklist Colors
+Timestamp Styler
+Introduction Setup
+Kick Counter
+
+Auto Join
+Lagbar System
+Scripted Text
+Invite Notifier
+Proxy Scanner
+Netsplit Detector
+
+Away System
+Memo Express
+Net Scanner
+URL Manager
+Email Client
+File Server Setup
+User List
+
+System Info
+Multi Network Info
+Personal Info
+DCC Transfer Info
+Time Info
+Connection History
+Country Lookup
+IP Lookup
+
+Characters Map
+Text To Chars
+Measurement Convertion
+
+File Transfer Manager
+Quote Manager
+Nick Completor
+Notify Viewer
+Kicked User List
+List Maker
+Auto Regain Nick
+IP & Nick Finder
+Vote Machine
+Channel Counter
+Alarm Clock
+
+Auto Timed Message
+Ignore Manager
+Seen System
+Quits Editor
+
+Personal Games
+Pic Player
+Trivia Settings
+Lyrics Finder
+Sketch
+Big Fonts
+Colors Talker
+Funny Pets

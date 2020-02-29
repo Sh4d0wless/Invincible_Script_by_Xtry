@@ -1,0 +1,1 @@
+IP & Nick Finder will helps you to search for hostnames/IPs and nicknames. It's using whois raws to display the result in the dialog.

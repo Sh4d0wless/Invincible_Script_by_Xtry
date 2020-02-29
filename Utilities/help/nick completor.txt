@@ -1,0 +1,1 @@
+Nick Completor is a text process which helps you to type the text to a user. It only works in the channel. Read the help files on that Nick Completor

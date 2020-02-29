@@ -1,0 +1,1 @@
+Sketch is a system in Invincible which can help you create/copy/send pictures in *.bmp. You can set the colors,size,etc.

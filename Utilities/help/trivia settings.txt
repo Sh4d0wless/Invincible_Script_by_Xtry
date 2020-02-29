@@ -1,0 +1,1 @@
+Trivia Settings is a configuration dialog for Trivia games in Invincible. You can play it through channel's window popups.

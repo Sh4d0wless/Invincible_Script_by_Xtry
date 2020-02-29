@@ -1,0 +1,1 @@
+DCC controls is a panel for DCC setup, you can configure your DCC size and pDCC size. Also you can see the infos for received/sent files, and failed transfer. You can reset the statistic with "Reset Stats".

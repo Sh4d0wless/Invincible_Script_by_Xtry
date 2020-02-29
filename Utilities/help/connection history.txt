@@ -1,0 +1,1 @@
+Connection History is a system which save your server on first connecting, So you can see the previous servers from here. You can enable & disable this feature.

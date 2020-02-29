@@ -1,0 +1,1 @@
+Ignore Manager is a system which display your ignore status or ignore list. You can set the types of ignore you want. It also shows you the current ignored user or address.

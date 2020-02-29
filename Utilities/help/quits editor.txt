@@ -1,0 +1,1 @@
+Quits Editor helps you to set your quit message in Invincible or random quit message. You can access it through menubar popups. Also, You can Add or remove the quit messages in dialog list.

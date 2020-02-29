@@ -1,0 +1,1 @@
+Colors Talker, if enabled your msg will be send as randomised & colored. Try it and you can see it, And if it was enabled then the Scripted Text system will disabled, because you can't run both of them once.

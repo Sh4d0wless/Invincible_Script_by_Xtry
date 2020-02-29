@@ -1,0 +1,1 @@
+Away System helps you whenever you need to away or back. you can set the options,message,sounds,logs,pager,etc. And you can set your preset away messages.

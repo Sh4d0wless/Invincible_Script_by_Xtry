@@ -1,0 +1,9 @@
+You can set and edit the script's text display with 3 colors (premary,secondary & tertiary) & a logo style, it looks like a simple theme, and you can choose the colors you want.
+
+Premary colour is for such as an important info, like nickname,address,and any other script's infos
+
+Secondary colour is for normal script text
+
+Tertiary colour is for logos,(,),..etc
+
+You can see it once you try it.

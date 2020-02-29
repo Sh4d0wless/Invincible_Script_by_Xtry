@@ -1,0 +1,1 @@
+Country Lookup is very usefull for you to get a country info for a hostname. Please not that you can't get a country info for hostname with numbers (ie: 202.456.123).

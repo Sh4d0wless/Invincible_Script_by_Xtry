@@ -1,0 +1,8 @@
+Help Center
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+In this help center, you have explanations for script's contents and utilities.
+
+Click on a topic on the left to see it's description.
+
+I also provide some Commands explaining what they do.

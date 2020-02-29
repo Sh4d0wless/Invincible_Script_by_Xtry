@@ -1,0 +1,1 @@
+You can set your email in Email Client, before that you need to set your account info (username,password,POP3 Server,etc). You can send or checks your inbox from Email Client.

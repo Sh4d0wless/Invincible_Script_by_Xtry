@@ -1,0 +1,1 @@
+Kicked User List is a list of all users you have kicked all along with the messages.

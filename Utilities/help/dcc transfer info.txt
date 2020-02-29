@@ -1,0 +1,1 @@
+DCC Transfer Info will display your current dcc transfer progress (send/get). You can set this to autorun if there's a incoming/outgoing file transfer and/or set it to autorun if you open this DCC Transfer Info.

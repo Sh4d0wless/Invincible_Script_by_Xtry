@@ -1,0 +1,1 @@
+Weather Forecaster helps you to check the current weather in the speficied geographical locations. Please note that weather forecaster is using web source so sometimes it doesn't work because the web is down or removed.

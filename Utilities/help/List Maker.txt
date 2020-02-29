@@ -1,0 +1,1 @@
+List Maker helps you to create a list from a file or folder to a text file (.txt). You can use it to make the list of your songs,images,etc.

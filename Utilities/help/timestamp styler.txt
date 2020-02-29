@@ -1,0 +1,1 @@
+Timestamp styler can edit your timestamp display in the left side of the script's window, you can use the preview to see it.

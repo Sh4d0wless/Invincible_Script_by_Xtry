@@ -1,0 +1,1 @@
+Multi Network Info will display the statistics of your multi networks (if you are using Invincible in multi network onlines). And the statistics shows you your nicknames,channels,etc.

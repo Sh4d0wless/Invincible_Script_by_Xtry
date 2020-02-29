@@ -1,0 +1,8 @@
+User List helps you to select a user which is your friends,or else. There's 4 types in Users List:
+
+1. Protected User (999)
+2. Auto Op User (150)
+3. Auto Voice User (100)
+4. Death Listed User (50)
+
+Regular users indicated with Normal Users and has level access to 1.

@@ -1,0 +1,1 @@
+Auto oper used only by an IRC Operator, it will automatically oper up the added nickname in the server

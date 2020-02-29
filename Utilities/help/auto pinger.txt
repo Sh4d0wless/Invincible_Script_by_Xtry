@@ -1,0 +1,5 @@
+There are 2 types of Auto ping here.
+
+1) Auto ping to server, it will automatically ping your current server to get the respond. you can set the delay between pings
+
+2) Auto ping to user, it will automatically ping the user who ask for it (type !ping, or say ping me, etc). and send the ping reply back to that user

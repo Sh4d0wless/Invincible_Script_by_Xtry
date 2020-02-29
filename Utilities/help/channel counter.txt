@@ -1,0 +1,1 @@
+There are 3 types counter in Channel Counter, they are: Join Counter, Part Counter, and Kick Counter. If you enabled all these features it will count all the users who join & part the channel, and count all the kicked users from the channel.

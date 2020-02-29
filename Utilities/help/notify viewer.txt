@@ -1,0 +1,1 @@
+Notify Viewer dialog will display you your notified users. And tells you if the user is online or offline.

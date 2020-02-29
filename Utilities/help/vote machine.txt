@@ -1,0 +1,1 @@
+Vote Machine is a system which can help you to vote in a channel. all vote result will display into the dialog & you can put your own vote also.

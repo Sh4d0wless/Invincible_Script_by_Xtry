@@ -1,0 +1,1 @@
+Auto Regain Nick helps you to regain a nickname. example: you want to use NICK-A, and you want to change it to NICK-B but NICK-B is still used by someone, you can use auto regain nick to regain NICK-B if it's not use anymore, it will change your NICK-A to NICK-B.
