@@ -1,0 +1,52 @@
+[mIRC] Open the 'mIRC About' window (press Alt+H+A), and right click the mouse button in it. You'll see a little "i" dot starting to bounce over the word mIRC.
+[mIRC] Open the 'mIRC About' window (press Alt+H+A), and type the word "ARNIE" with your keyboard. You'll see a funny big crocodile replacing the mIRC author's picture. You have just met Arnie, the author's pet.
+[mIRC] Open the 'mIRC About' window (press Alt+H+A), and click the mIRC icon with your left mouse button. You'll see the icon change to the old mIRC logo. Click again to back to normal.
+[mIRC] Open the 'mIRC About' window (press Alt+H+A), and click the mIRC author's nose with your left mouse button. You'll hear a funny "squeak" sound if you have soundcard and speakers in your computer.
+[mIRC] Press and hold the Shift button on your keyboard, and click the 'mIRC About' icon in the toolbar with your left mouse button. You'll see it change to a smiley face. Click again to back to normal.
+[mIRC] Place your mouse pointer over the 'mIRC About' icon in the toolbar, and click right mouse button. You'll see silly comments. Keep on clicking approx 30 times to see all of the comments hidden into the icon.
+[mIRC] Click the 'mIRC Finger' icon in the toolbar, then the finger-dialog pops up, and click cancel. Do the same again, on the third time, you'll get Arnie's (Khaled's pet) email address.
+[mIRC] Press and hold the Shift button on your keyboard, and click the 'Tile windows' icon in mIRC's toolbar with your left mouse button. It tiles all of the open windows vertically.
+[mIRC] Whois with Idle Time : type /whois Nickname Nickname (e.g: /whois xtry xtry) or type /whois ServerName.* Nickname (e.g: /whois kernel.* xtry)
+[mIRC] Show the ignore list : type /ignore -l
+[mIRC] Clear the Ignore List : type /ignore -r
+[mIRC] List of IRCop in your active server : type //stats o ActiveServer (e.g: //stats o hotspeed.sg.as.dal.net)
+[mIRC] List of IRCop in your active network (global search) : type /who 0 o
+[mIRC] List of CSop : type /motd services.*
+[mIRC] Listing channels with specified word : type /list *word* (e.g: /list *help*)
+[mIRC] Listing a specified channel : type /list #Channel - Unavailable if channel is in +s mode
+[mIRC] Display the Who Flag : type /who ?
+[mIRC] Automatic Ping to active server : type //timer 0 Delay(Secs) /raw -q ping YourNickname (e.g: //timer 0 300 /raw -q ping $me - it will automatically ping you to your active server each 300 secs)
+[mIRC] Add/Remove Silence : type /silence +Nickname!UserID@Hostname (e.g: /silence +xtry!ivan@123.456.789 or /silence +*!*@123.456.789), to remove it type /silence -Nickname!UserID@Hostname (it available only when you were connected)
+[mIRC] Listing channels with minimum & maximum users : type /list -min MinNumber +max MaxNumber (e.g: /list -min 100 +max 200)
+[mIRC] Display your current User Mode : type //mode YourNickname (e.g: //mode $me $+ )
+[mIRC] Display a channel ban list : type /mode #Channel +b or type /mode #channel b (e.g: /mode #Help +b or /mode #Help b)
+[mIRC] Search a nickname with a specified hostname : type /who +h *Hostname* (e.g: /who +h *ip12-34.cbn.net.id*) - Unavailable if user is in +i mode
+[mIRC] Search a nickname with a specified IP Address : type /who +i *IP Address* (e.g: /who +i *202.123.456*) - Unavailable if user is in +i mode
+[mIRC] Speed up your DCC sessions : type /fsend on
+[mIRC] Parts all of channels you're currently on : type /partall or type /partall MessageHere
+[mIRC] Cycle/Hop to the active/other channel : type /hop or type /hop #Channel
+[mIRC] Display available servers in your active network : type /links
+[mIRC] Fast URL Search from mIRC (www.yahoo.com) : type //run http://search.yahoo.com/bin/search?p= $+ KEYWORDS (e.g: //run http://search.yahoo.com/bin/search?p= $+ FREE MP3)
+[mIRC] Fast URL Search from mIRC (www.google.com) : type //run http://www.google.com/search?q= $+ KEYWORDS (e.g: //run http://www.google.com/search?q= $+ FREE MP3)
+[mIRC] Fast URL Search from mIRC (www.alltheweb.com) : type //run http://www.alltheweb.com/cgi-bin/search?exec=FAST+Search&type=all&query= $+ KEYWORDS (e.g: //run http://www.alltheweb.com/cgi-bin/search?exec=FAST+Search&type=all&query= $+ FREE MP3)
+[mIRC] Fast URL Search from mIRC (www.goto.com) : type //run http://www.goto.com/d/search/p/go/?Partner=go_home&Keywords= $+ KEYWORDS (e.g: //run http://www.goto.com/d/search/p/go/?Partner=go_home&Keywords= $+ FREE MP3)
+[mIRC] Set your DCC packet size : type /dcc packetsize SizeHere (e.g: /dcc packetsize 8192 - the default setting is 4096)
+[mIRC] Speed up your DCC send : type /pdcc on or type /pdcc Size (e.g: /pdcc 100931731455 or /pdcc 999999999999)
+[mIRC] Checking a domain with StatServ (DALnet) : type /statserv domain DomainName (e.g: /statserv domain www.my-web.com)
+[mIRC] Checking a hostname with StatServ (DALnet) : type /statserv host HostName (e.g: /statserv host 202.123.456)
+[mIRC] See the Message Of The Day (MOTD) of your active server : type /motd
+[mIRC] See your currently Server Administrator : type /admin
+[mIRC] See your currently Server Version : type /version
+[mIRC] Checking Domain Name Server (DNS) for Nickname/Address : type /dns Nickname or type /dns Address (e.g: /dns $me or /dns 202.123.456)
+[mIRC] Get info for offlined user : type /whowas Nickname
+[mIRC] See mIRC latest news : Press Alt+H+L
+[mIRC] Hide All open windows to Status Window : Press Alt+F1
+[mIRC] Restore or Maximize active window : Press Alt+X
+[mIRC] Choosing fonts for active window : type /font
+[mIRC] Close all Query windows : type /close -m
+[mIRC] Close all Open windows : type /close -isgmf
+[mIRC] Minimize mIRC to Tray : type /showmirc -t
+[mIRC] Open Notepad : type /run notepad
+[mIRC] Open Calculator : type /run calc
+[mIRC] Open DOS Prompt : type /run dosprmpt
+[mIRC] Open Telnet : type /run telnet

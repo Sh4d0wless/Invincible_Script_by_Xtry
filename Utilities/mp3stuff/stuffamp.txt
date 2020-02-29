@@ -1,0 +1,211 @@
+--------------------------------------------------------------------------------
+ Stuffamp [2002.08.11] by Andy Dufilie (^Andy) - January 8th 2003 1:48pm
+--------------------------------------------------------------------------------
+ Homepage:  http://come.to/andys.site/  or  http://pages.cthome.net/pdufilie/
+--------------------------------------------------------------------------------
+ This is an addon made for mIRC32 v5.8+, designed for use with mp3stuff, my
+ other addon.  It can also be used on its own, but with little functionality.
+ Winamp skins are used for the player face, and it functions just like winamp.
+
+ --------------------------------------------------------
+  The newest changes are listed at the end of this file.
+ --------------------------------------------------------
+
+ ========
+  Thanks
+ ========
+  Thanks to Borut Hrzenjak for letting me include the boamp skin.  You can get
+  the full Winamp skin from here:
+    http://pages.cthome.net/pdufilie/dl/boamp.wsz
+
+ =====================
+  How to use Stuffamp
+ =====================
+ - Type /load -rs stuffamp.mrc to load the addon.
+ - Type /stuffamp to open the player.
+ - Right-click in the player window for options.
+ - If you have "open on /splay" disabled, you can use the command:
+   "stuffamp splay <stuff>" where you would normally just use "splay <stuff>".
+   This will open Stuffamp if it isn't already open.
+ - Winamp skins may be used with Stuffamp.  Just unzip the skin to a
+   directory, right-click in Stuffamp, and you can select that skin.
+   [Note]:  Winamp Skin Zip files (*.wsz) are actually .zip files.  Just rename
+            the .wsz file to a .zip, and you can unzip it to a directory.
+
+ Controls:
+   - You can use the keyboard shortcut keys instead of clicking in the window.
+     Hold shift while clicking some buttons to perform the alternate function.
+
+            |< = Shortcut Key: Z
+                 Normal Click: Play the previous song if mp3stuff is loaded, or
+                               go to the beginning of the current song if
+                               mp3stuff is not loaded.
+                  Shift+Click: Rewind 5 seconds
+
+             > = Shortcut Key: X
+                 Normal Click: Play
+                  Shift+Click: Open an mp3
+
+            || = Shortcut Key: C
+                     Function: Pause/Unpause
+
+            [] = Shortcut Key: V
+                 Normal Click: Stop
+                  Shift+Click: Stop w/ fadeout
+
+            >| = Shortcut Key: B
+                 Normal Click: Skip to next song if mp3stuff is loaded
+                  Shift+Click: Fastforward 5 seconds
+
+       (Eject) = Shortcut Key: L
+                     Function: Open an mp3
+
+            EQ = Shortcut Key: O
+                     Function: Open/close Options Dialog (mp3stuff)
+
+            PL = Shortcut Key: P
+                     Function: Open/close Playlist Editor (mp3stuff)
+
+       Shuffle = Shortcut Key: S
+                     Function: Toggles shuffle play queue (mp3stuff)
+
+        Repeat = Shortcut Key: R
+                     Function: Toggles continuous play (mp3stuff)
+
+  Time display = Shortcut Key: T
+                     Function: Toggles elapsed/remaining time display.
+
+    Volume bar = Shortcut Keys: Up/Down Arrows
+                 This is in the middle of the window above the seek bar.
+                 Click and drag to change mp3 volume.
+
+      Seek bar = Shortcut Keys: Left/Right Arrows
+                 This is the length of the window, towards the bottom.
+                 Click and drag to seek to a part in the mp3 playing.
+
+   System menu = Opens a dialog with version info and options to check for and
+                 install new versions of Stuffamp.
+
+        Minimize Shortcut Key: Escape
+
+     Windowshade Shortcut Key: W
+
+   The following things currently do nothing:
+     Balance bar, Clutter bar, Spectrum analyzer box
+
+
+ =================
+  Hidden features
+ =================
+   These features might not be obvious if you don't know winamp inside out.
+
+   Window snapping
+     - When moving the window, Stuffamp will snap at 16 pixels to the inside
+       edges of mIRC if it's inside, or to the outside edges of mIRC and the
+       edge of the screen if it's on the desktop.  Hold shift to disable.
+
+   Double-click title bar
+     - Switch between normal and windowshade mode.  This is the same as
+       clicking the middle of the three buttons in the upper right corner.
+
+   Right-click on time display
+     - Shows elapsed/remaining time display options.
+
+   Click & drag songname
+     - Scroll the songname manually if it's too long to be displayed.
+
+   Right-click songname
+     'Convert underscores to spaces'
+       - This will display underscores (_) as spaces when enabled.
+     'Autoscroll songname'
+       - Normally, the songname will scroll if it's long.  You can disable it
+         so it will only scroll when you click & drag on it.
+
+   Right-click on seek bar
+     - Displays options to rewind/fastforward 5 seconds.  The left and right
+       arrow keys will also rewind/fastforward 5 seconds.
+
+   Right-click on buttons
+     - Right-click on buttons for extra options.  The normal function will be
+       displayed as well as alternate functions.
+
+--------------------------------------------------------------------------------
+
+ =================
+  Fixes/Additions
+ =================
+
+  2001.02.06 (0.1)
+   - First version.
+
+  2001.02.25 (0.2)
+   - Entire GUI is faster now.
+   - Fixed to work with mIRC v5.9.
+   - Improved some more stuff.
+
+  2001.05.14 (0.21)
+   - Fixed popup bugs when mp3stuff was not loaded
+   - Fixed bug with window snapping.
+
+  2001.06.02 (0.22)
+   - Added a progress bar for downloading new versions.
+   - Made things a little faster.
+   - Fixed some other bugs.
+   - Fixed bugs with pause display.
+
+  2001.06.? (0.23)
+   - Improved desktop mode.  When switching between programs, Stuffamp will
+     stay on top of mIRC when mIRC is active, but not on top of other programs.
+     (It behaves like a mIRC dialog.)
+   - Added popups for listen/play-to modes (for mp3stuff).
+   - Stuffamp should should go faster now.
+
+  2001.06.16
+   - Shuffle button is now functional for toggling the option in mp3stuff.
+   - Stuffamp now uses a multimedia timer for better display.
+   - The "|<" (previous track) button now listens to the previous song when
+     using mp3stuff.
+
+  2001.06.25
+   - Added a Winamp icon that will show if Stuffamp is on the desktop and you
+     have mIRC 5.9+.
+   - Fixed some minor bugs & updated for the new version of mp3stuff.
+
+  2001.07.03
+   - Added an option for using a high-resolution timer.  This will update the
+     window more often, making it look more like winamp, but it could slow down
+     your other scripts.
+   - Added 'open on startup' option to open Stuffamp when mIRC starts.
+
+  2001.07.05
+   - Added options to stop Stuffamp from opening automatically on /splay, and
+     stopping the mp3 when closing Stuffamp.
+   - Added functionality so you can type /stuffamp splay <...> to always open
+     Stuffamp as well as perform the splay command with the parameters given.
+
+  2001.07.08
+   - If mp3stuff is loaded, Stuffamp will no longer check for new versions in
+     addition to mp3stuff checking.  (Disabling the version check in either
+     mp3stuff or Stuffamp will now disable both.)
+
+  2001.10.31
+   - I had to change the version check/download site.
+   - Fixed file/skin selecting bugs in mIRC v5.8.
+   - Fixed popup bug in mIRC v5.8.
+
+  2002.02.06
+   - Added option "'stop' turns continuous play off" under "more options."
+   - Fixed display bugs in mIRC 6.0.
+
+  2002.04.04
+   - Just an update to accomodate for the changes made in the new version of
+     mp3stuff.
+
+  2002.06.07
+   - Fixed bugs that appeared when using the new mIRC v6.02.
+
+  2002.08.11
+   - Just a change in the popups.  They will use real checkmarks in newer
+     versions of mIRC.
+
+--------------------------------------------------------------------------------

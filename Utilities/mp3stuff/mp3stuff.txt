@@ -1,0 +1,1342 @@
+--------------------------------------------------------------------------------
+ mp3stuff [2002.08.11b] by Andy Dufilie (^Andy) - August 12th 2002 2:24pm
+--------------------------------------------------------------------------------
+ Homepage:  http://come.to/andys.site/  or  http://pages.cthome.net/pdufilie/
+   Check out these other addons by me:  Tanks & bmp2html
+ Report any bugs, and send comments and suggestions to:  a_s_d@snet.net
+--------------------------------------------------------------------------------
+ This is an addon made for mIRC32 v5.7+.
+
+ To install, type the following in a mIRC window:  /load -rs mp3stuff.mrc
+ If the file is in a directory other than your mIRC directory, specify it.
+--------------------------------------------------------------------------------
+ If you want to include mp3stuff in your script, please do.  It would also be
+ nice if you e-mailed me if you do.  Thanks. :)
+--------------------------------------------------------------------------------
+
+ ========================================================
+  The newest changes are listed at the end of this file.
+ ========================================================
+
+
+ |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|
+ |  mp3stuff help  |
+ |_________________|
+   mp3stuff will work with mp3s that have commas, and even double-spaces in
+   the file names.  It also supports variable bitrate mp3s.  mp3stuff uses
+   mp3 file info caching.  The first time it gets info from an mp3, it will
+   save the info for later use.  This makes everything go much faster.  You
+   can install mp3stuff from any directory; just put both .mrc files into
+   the same directory, and include the path when you install.
+   Example:
+     Put both .mrc files into c:\mp3\ and type /load -rs c:\mp3\mp3stuff.mrc
+     If the directory has a space in it, put quotation marks around the file.
+     Example:  /load -rs "c:\m p 3\mp3stuff.mrc"
+
+   mp3stuff also supports Passive DCC send (pasvdcc.mrc) by vague, for sending
+   files from behind a firewall or network.  You can get it from this address:
+            http://pages.cthome.net/pdufilie/irc/pasvdcc.mrc
+
+   _________________________________
+  |           Help topics           |
+  |=================================|
+  | - Popup menu                    |
+  | - Remote control                |
+  | - Options dialog                |
+  | - Play queue editor             |
+  | - mp3 History                   |
+  | - Playlist editor               |
+  | - mp3 Search                    |
+  | - File browser                  |
+  | - /Commands                     |
+   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+
+ ============
+  Popup menu
+ ============
+   mp3stuff adds popups to the Status Window, Channel, Nicklist, Query, and
+   Menubar.  Some popups have "»" or "«" in the name.  Click on these to hide
+   or unhide that group of options.  Popups with "[ ]" or "[×]" in front of the
+   name act like checkboxes.  Click on them to toggle the option on or off.
+   The rest of the choices will open a window or an mp3.
+
+   [ Next mp3 ]
+     - This appears above the 'mp3stuff' menu when an mp3 is in the play queue,
+       or when an mp3 is currently playing and 'continuous play' is enabled.
+     - If any mp3s are in the play queue, this will play the next mp3 in the
+       list.
+     - If the queue is empty, it will select a random mp3 and open it.  If you
+       have the playlist enabled, it will pick a random one from the playlist.
+       Otherwise, a random one will be picked from your specified mp3
+       directories.
+
+   Choose an mp3
+     - Open an mp3 using the current play mode settings.
+
+   Next mp3
+     - Same as described above.
+
+   'Play-to' mode
+     - This will play to the specified channels/queries.          
+
+   stuffamp
+     - This menu appears only if you are using mIRC v5.8+.
+
+   Advertise mp3stuff
+     - This advertises mp3stuff in the active channel/query window.
+
+   Others
+     - For help on the other options, read the 'remote control' and 'options
+       dialog' sections.
+
+
+ ================
+  remote control
+ ================
+   The remote control is a small dialog that you can keep open for easy playing
+   of mp3s.  In the popup, click on  "mp3stuff > open remote control"
+
+     'Open...' button
+       - Lets you pick an mp3 to open.
+
+     'Options' button
+       - Opens the options dialog.
+
+     'Prev' button
+       - This opens the previously played mp3.
+
+     'Next' button
+       - If any mp3s are in the play queue, this will play the next mp3 in the
+         list.
+       - If the queue is empty, it will select a random mp3 and open it.  If
+         you have the playlist enabled, it will pick a random one from the
+         playlist.  Otherwise, a random one will be picked from your specified
+         mp3 directories.
+       - Continuous play will be turned on when you click this button.
+
+     Play to
+       - This will play to the channel or query specified in the edit box on
+         the right. mp3stuff will only play to channels you are currently in
+         and query windows that you have open.  Everything else that is entered
+         into the edit box is ignored.
+         - You can double-click on the radio button to put the active channel or
+           query into the edit box.
+         - You can enter more than one place to play the mp3 by separating them
+           with commas.  Enter "all" into the edit box to play to all channels
+           you are currently in.  If you aren't in any channels, 'all' will
+           play to all queries.
+         - If this radio button is checked, there are no valid channels or
+           queries in the edit box, mute is not on, and you try to play an mp3,
+           it will switch to listening mode and open the mp3.
+
+     'Chans' button
+       - This lets you select which channels to play to.
+
+     'Spam' button
+       - This will send your play message to the specified channels.
+
+     Continuous play
+       - If this box is checked, mp3stuff will play a random mp3 after the
+         current one.
+
+     Mute
+       - This will mute mp3s when playing in play-to mode.
+
+
+
+
+ ================
+  options dialog
+ ================
+   In this dialog, you can configure most of the options available in mp3stuff.
+   In the popup, click on  "mp3stuff > more options > options dialog"
+
+ ------------
+
+     Version checking
+     ----------------
+       - mp3stuff can automatically check for new versions and install them.
+
+       Check for new version
+         - Click on this button to check if you have the latest version of
+           mp3stuff.
+
+       Install newest version
+         - Click on this button to download and install the latest version.
+
+       Check for new version on startup
+         - When this is enabled, mp3stuff will check if you have the latest
+           version when you open mIRC.
+
+       Install new version when found
+         - When a new version is found, this will download and install it
+           automatically.
+
+       'About' button
+         - Opens a dialog that shows the version number, has a button to send
+           me an e-mail, and a button to visit my web page.
+
+ ------------
+
+     Playlist options
+     ----------------
+       - You can create a playlist and have mp3stuff play random mp3s from it.
+
+       'Edit playlist' button
+         - This opens the playlist editor, described at the end of this file.
+
+       Use playlist as random mp3 source
+         - Enables or disables playlist feature.
+
+       Only play each mp3 in playlist once
+         - Will not repeat mp3s until entire playlist has been played.
+
+       Restart playlist and continue when done
+         - When you have 'only play each mp3 in playlist once' enabled, and all
+           the mp3s in the playlist have been played, mp3stuff can either stop
+           playing or restart the playlist and continue.
+
+ ------------
+
+     Remote control options
+     ----------------------
+
+       On top
+         - This sets the remote control on top of other windows when enabled.
+
+       Desktop
+         - This will open the remote control as a desktop window, and it will
+           be shown on the taks bar.
+
+ ------------
+
+     System options
+     --------------
+
+       Stop at end of play queue
+         - This will turn continuous play off at the end of the play queue.
+
+       Shuffle play queue
+         - This will play the mp3s in the play queue in random order.
+
+
+       Enqueue by default
+         - This lets you choose what mp3stuff will do with an mp3 when it is
+           ready to be played.  If this option is enabled, then the mp3s will
+           be placed in the play queue to be opened in order after the one
+           that is currently playing finishes.  Otherwise, mp3s will be opened
+           immediately on selection, regardless if one is already playing.
+
+
+       Listen to others' mp3s
+         - When others play mp3s and their script sends an mp3 ctcp, mp3stuff
+           will search your mp3 directories for the file and open it.  If the
+           mute option is on, this will be disabled.
+
+       Allow interruptions
+         - This option only matters if listening is enabled and 'enqueue by
+           default' is disabled.  If you are currently listening to an mp3 and
+           someone plays one to you, the mp3 will either be placed in the play
+           queue if this option is disabled, or it will be opened immediately
+           (interrupting your current mp3) if this option is enabled.  If
+           'enqueue by default' is enabled, then mp3s being played by others
+           will always be placed in the play queue to be opened later.
+
+
+       mp3 File info caching
+       ---------------------
+         - mp3stuff uses mp3 file info caching.  The first time it gets info
+           from an mp3, it will save the info for later use.
+
+         Use mp3 file info caching
+           - This will enable or disable the mp3 file info caching.
+
+         Clear cache
+           - This will clear the mp3 file info cache.
+
+
+       Use windows file dialog for mp3s
+         - You can use either the dialogs in mp3stuff or the windows file
+           selecting system to choose mp3s and m3us.
+
+       Windows file dialog re-opens
+         - If enabled, the dialog will re-open after you select a file.
+
+
+       Replace underscores (_) with spaces when playing mp3s
+         - With this option, if your files have underscores in the filenames,
+           they will be replaced with spaces in your play messages.
+
+ ------------
+
+     Colors for <c> tags in echos, separated by commas
+     -------------------------------------------------
+       - Specify the numbers you want mp3stuff to pick from when choosing
+         random colors for <c> tags in echos.
+
+       Enable random colors
+         - Normally, echos will use the info text color where <c> tags are.
+           If this is enabled, it will use random colors instead.
+
+       'Save as...' button
+         - Saves the current list of colors to a preset with the name you want.
+
+       'Presets' drop-down menu
+         - Select a color list preset to load into the edit box.
+
+         '[Default]' preset
+           - This puts all colors except your normal text color and your
+             background color into the edit box.
+
+       'Remove' drop-down menu
+         - Select a color list preset to remove.
+
+
+     Custom listening echo
+     ---------------------
+       - You can enter a custom listening echo into the edit box.
+         This can use all of the tags listed below.
+
+       Echo to status instead of active
+         - If you don't want mp3stuff echoing to the active window when you are
+           listening to mp3s, then check this box.
+
+       Don't echo when stuffamp is open
+         - If stuffamp is open and you have this option enabled, the listening
+           echo and file queueing echos will be disabled.
+
+       'Save as...' button
+         - Saves the current listening echo to a preset with the name you want.
+
+       'Presets' drop-down menu
+         - Select a preset to load the listening echo into the edit box.
+
+       'Remove' drop-down menu
+         - Select a listening echo preset to remove.
+
+
+     Bullet for other echos
+     ----------------------
+       - You can enter a bullet for other echos with the edit box.
+         <c> and </c> tags will work here.
+
+       'Default' button
+         - This will put the default bullet into the edit box.
+
+
+     Color for </c> tags in echos
+     ----------------------------
+       - The '+/-' buttons change the color.
+       - The 'default' button puts your normal text color in the edit box.
+
+ ------------
+
+     Colors for <c> tags in messages, separated by commas
+     ----------------------------------------------------
+       - Specify the numbers you want mp3stuff to pick from when choosing
+         random colors for <c> tags in messages.
+
+       Enable random colors
+         - This enables/disables <c> tags in messages.
+
+       'Save as...' button
+         - Saves the current list of colors to a preset with the name you want.
+
+       'Presets' drop-down menu
+         - Select a color list preset to load into the edit box.
+
+       'Remove' drop-down menu
+         - Select a color list preset to remove.
+
+
+     Custom play message
+     -------------------
+       - You can enter a custom play message into the edit box.
+         This can use all of the tags listed below.
+
+       Send as action
+         - This will send the play message as an action instead of normal text.
+
+       Mute when playing
+         - This allows you to play mp3s to a channel without listening to them
+           yourself.  Mute will be turned off when you click on a popup or
+           button to listen to an mp3.
+
+       Send mp3 ctcps
+         - This allows others to hear your mp3s if they have an mp3 with the
+           same filename and an mp3 script that supports mp3 ctcps.
+
+       Echo mp3 ctcps
+         - You can have mp3stuff display the mp3 ctcps being sent or not with
+           this option.
+
+       'Save as...' button
+         - Saves the current play message to a preset with the name you want.
+
+       'Presets' drop-down menu
+         - Select a preset to load the play message into the edit box.
+
+         '[Default2]' preset
+           - The [Default2] preset will remove colors 1 and 15 from the current
+             color list when loaded.
+
+       'Remove' drop-down menu
+         - Select a play message preset to remove.
+
+ ------------
+
+     Custom timed channel advertisement
+     ----------------------------------
+       - You can enter a channel advertisement to be sent to all channels in
+         your 'play to' list (the edit box on the remote control, and in the
+         mp3 selecting dialog).  This can use the following tags:
+         <c> </c> <nick> <open slots> <used slots> <slots> <open queues>
+         <used queues> <queues> <mp3count> <list count> <list size>
+
+       Start ad now, and on startup
+         - When you turn this option on, your advertisement will be sent, and
+           the timer will be started to send it again.  The timer will also be
+           started each time you open mirc.
+
+       Minutes
+         - The '+/-' buttons change the number of minutes for the timer.  You
+           can click on one, then hold down the enter key to keep increasing
+           or decreasing it. The minimum is 1 minute and the maximum is 60.
+
+       'Save as...' button
+         - Saves the current play message to a preset with the name you want.
+
+       'Presets' drop-down menu
+         - Select a preset to load the play message into the edit box.
+
+         '[Default2]' preset
+           - The [Default2] preset will remove colors 1 and 15 from the current
+             color list when loaded.
+
+       'Remove' drop-down menu
+         - Select a play message preset to remove.
+
+ ------------
+
+     Supported tags
+     --------------
+          <!nickmp3> - Inserts "!<your nick> <mp3>" into the message.  The
+                       "!<your nick>" part will only show up if the mp3 is in
+                       your specified mp3 directories, and only if you have
+                       auto-send enabled.
+               <mp3> - The filename of the mp3 being played.
+          <mp3noext> - The filename without the .mp3 extension.
+              <size> - File size
+              <time> - Length of the mp3
+              <kbps> - Kbps
+               <khz> - kHz
+            <stereo> - Mono / Stereo / Joint Stereo
+                 <c> - Inserts a random color if enabled.
+                </c> - Switches to normal text color.
+              <nick> - Inserts the nick specified in the last tab of the
+                       options dialog. (nick used in list)
+        <open slots> - Number of open send slots
+        <used slots> - Number of send slots in use
+             <slots> - Total number of send slots
+       <open queues> - Number of open queues
+       <used queues> - Number of used queues
+            <queues> - Length of queue list
+          <mp3count> - Total number of mp3s in your directories
+        <list count> - Total number of mp3s in your list
+         <list size> - Total size of the mp3s in your list
+
+     Also, for id3 info:
+       <artist> <album> <track> <title> <year> <comment> <genre>
+
+ ------------
+
+     File serving options
+     --------------------
+
+       Auto-send files when they are requested
+         - This will allows others to get mp3s from you by typing
+           "!<yournick> <filename>" into a channel or query with you.
+           It also allows others to get your mp3 list by typing "@<your nick>".
+         - Example:  If your nick is "Bob", and you have an mp3 named
+             "Good Song.mp3", people can type "!Bob Good Song.mp3" to
+             get it from you.  To get your list, they can type "@Bob".
+
+       Number of send slots
+         - This will limit the total number of sends you can have at the same
+           time. If you have the maximum number of sends open, and someone
+           requests an mp3 from you by typing "!<your nick> <file name>", the
+           request will be placed in a file queue list, and it will be sent
+           when enough files finish sending.  They can check their queue
+           status by typing "@<your nick>-que", and remove their queued files
+           by typing "@<your nick>-remove [file name]" (file name optional).
+
+       Max number of send slots per user
+         - You can limit the number of files that can be sent to a user at the
+           same time.
+
+
+     File serving channels
+     ---------------------
+       - You can limit the channels you serve mp3s in with these options.
+
+       'Add' button
+         - This button will add the channel you type in the edit box.
+
+       'Remove selected' button
+         - This will remove all the channels you have selected in the list box.
+
+       Allow requests in queries
+         - This will enable or disable file serving triggers in queries.
+
+       Serve in all channels
+         - This will ignore whatever is in the listbox, and enable triggers in
+           all channels.
+
+       Serve only those in the list
+         - This will only respond to file serving triggers in the channels
+           listed in the listbox.
+
+ ------------
+
+     File queues
+     -----------
+       Length of queue list
+         - Limits the length of the file queue list, as described above, under
+           "number of send slots".  If the file queue list fills up, no further
+           requests will be recorded.
+
+       Max number of queues per user
+         - You can limit the number of files that a user can have in your file
+           queue list.
+
+     Friend list (bypass queues)
+     ----------------------------
+       - You can add or remove nicknames or addresses that you want to allow to
+         get files from you without having to wait in the queue list.
+
+ ------------
+
+     @Locator/@Find
+     --------------
+
+       Respond to @Locator/@Find searches
+         - If this is enabled, then people can type "@Locator song name" or
+           "@Find song name" in a channel or query with you, and mp3stuff will
+           send the person messages if it finds any matches to their search.
+           Spaces will be replaced by "*"'s.  A "?" will match any one
+           character, and a "*" will match zero or more characters.
+         - Example:  If you have an mp3 named "Good Song.mp3", then all of
+             the following will find it:  "@Locator good", "@Find s?ng",
+             "@Find oo ong", "@Locator od?so", "@Locator go*ng"
+
+       Note to send with @Locator/@Find results
+         - If you have specified a note and an mp3 is found by a @Locator/@Find
+           search, the note will be sent with the results.  You can use the
+           following tags in the note:
+             <c> </c> <nick> <open slots> <used slots> <slots> <open queues>
+             <used queues> <queues> <mp3count> <list count> <list size>
+           These tags are described above, in the 'public display' section.
+
+ ------------
+
+     File serving msgs
+     -----------------
+
+       Display script ad when auto-sending
+         - Includes an ad in the notice that is sent when a file is requested.
+           The ad contains the script name, the version number, and the website
+           where it can be downloaded from.
+
+       Echo all messages that mp3stuff sends
+         - You can choose to see the messages that mp3stuff sends or not.
+
+       Respond to requests when features are disabled
+         - If auto-send or @Locator/@Find are disabled, this option will make it
+           reply to those requests, saying that the feature is disabled.
+
+ ------------
+
+
+     mp3 List
+     --------
+
+       'View list' button
+         - This will open your current list, if you have made one.
+
+       'Update' button
+         - This will make a list of your mp3s.  A minimized copy of mIRC
+           will open, and that mIRC window will create the list.  It will
+           close when the list is done.  The more organized your mp3s are
+           in your directories, the more organized the list will be.
+
+       Use full info (takes longer)
+         - Full info includes file size, length, kbps, khz, and mono/stereo.
+
+       Nick used in list
+         - This nick will be the one that is shown with a "!" before each file
+           name in the mp3 list.  The list shows "!<your nick> <file name>" for
+           each file, for easy requesting.  This nick will also be used in the
+           file name for the list.
+
+ ------------
+
+     mp3 Directories
+     ---------------
+       - The directories you set will be used to find mp3s when making mp3
+         lists, when playing random mp3s, when other people play mp3s, and when
+         people use @Locator/@Find/!nick file commands.  When a directory is
+         set, all the sub-directories are included.
+
+       'Add a directory' button
+         - Adds an mp3 directory to the list.
+
+       'Remove selected' button
+         - Removes the selected mp3 directories from the list.
+
+
+ ------------
+
+     mp3 Player
+     ----------
+       - If the default setting does not work for you, then you need to set an
+         mp3 player.  Winamp is recommended, but not required.  If a new window
+         opens every time you play an mp3, you need to go to the options of the
+         mp3 player and disable that feature.  If you are using Winamp, do this
+         by clicking on  "options > preferences > options"  in Winamp, and make
+         sure the option called "Allow multiple instances" is off.  Also, turn
+         off the repeat option so the mp3s don't loop when finished.
+
+       'mIRC' button
+         - Uses mIRC's built-in mp3 player. (for mIRC 5.8+)
+
+       'Select' button
+         - Lets you select an mp3 player.
+
+       'Default' button
+         - Uses the default setting.
+
+ ------------
+
+
+ ===================
+  Play queue editor
+ ===================
+   Command to open: /mp3stuffs
+
+     Set history length
+       - Sets the number of mp3s that will be kept in history.  Default is 200.
+
+     Remove selected
+       - This removes the selected mp3s from the play queue.
+
+     Stop at end of play queue
+       - This will turn continuous play off at the end of the play queue.
+
+     Shuffle
+       - This will play the mp3s in the play queue in random order.
+
+     Open random
+       - This will open a random mp3 from the play queue.
+
+
+ =============
+  mp3 History
+ =============
+   mp3stuff saves a list of the mp3s you have recently listened to.
+   Command to open:  /mp3stuffs
+
+     Set history length
+       - Sets the number of mp3s that will be kept in history.  Default is 200.
+
+     Remove selected
+       - This removes the selected mp3s from the history.
+
+   Open random
+     - This will open a random mp3 from the history.
+
+
+
+ =================
+  Playlist editor
+ =================
+   You can create a playlist and have mp3stuff play random mp3s from it.
+   To open the editor, click on  "mp3stuff > pq/hist/pl/search/browse" in the
+   popup menu.  You can also use the 'edit playlist' button on the first tab of
+   the options dialog to open the editor.  Command to open:  /mp3stuffs
+
+   dead files in playlist
+     - If a file in the playlist no longer exists, mp3stuff will search for the
+       file name in your mp3 directories, ignoring the path.  If a file with
+       the same name is found, it will be updated in the playlist.
+
+     Playlist editor controls
+     ------------------------
+
+       Use playlist as random mp3 source
+         - Enables or disables playlist feature.
+
+       Only play each mp3 in playlist once
+         - Will not repeat mp3s until entire playlist has been played.
+
+       Restart playlist and continue when done
+         - When you have 'only play each mp3 in playlist once' enabled, and all
+           the mp3s in the playlist have been played, mp3stuff can either stop
+           playing or restart the playlist and continue.
+
+       Add dir
+         - Adds all mp3s in a directory.
+
+       Add wildcard
+         - Adds all mp3s in your mp3 directories that contain a certain string.
+
+       Remove selected
+         - Removes the selected mp3s.
+
+       Remove dir
+         - Removes all mp3s in a directory.
+
+       Remove wildcard
+         - Removes all mp3s that contain a certain string.
+
+       Remove dead files
+         - Removes all files that no longer exist.
+
+       Options
+         - Opens the options dialog to the tab with playlist options on it.
+
+       Save copy
+         - Saves a copy of the playlist to a file (.m3u).
+
+
+
+ ============
+  mp3 Search
+ ============
+   Type "/mp3search [search string]" to search for mp3s in your specified mp3
+   directories.  You can also access /mp3search by clicking on can also be
+   accessed by clicking on  "mp3stuff > pq/hist/pl/search/browse"  in the
+   popup.
+
+   Edit box
+     - You can search again by typing in a search string in the editbox at the
+       bottom of the mp3 search window.  Wildcards may be used in the search
+       string.  A "?" will match any one character, and a "*" will match zero
+       or more characters.  Spaces will be replaced with "*"'s.
+
+   List all
+     - This will list all the mp3s in your specified mp3 directories.
+
+   Directories...
+     - This will open the options dialog to the proper tab to configure your
+       mp3 directories.
+
+   Open random
+     - This will open a random mp3 from the search results.
+
+
+
+ ==============
+  File browser
+ ==============
+
+   Current directory
+     - The current directory is displayed at the top of the dialog, and the
+       contents are below.
+
+   Drive letters drop-down menu
+     - The drop-down menu in the upper-right corner allows you to browse
+       different drives.  Select 'refresh' to refresh the current directory
+       and scan for drive letters again.
+
+   Directory contents
+     - Directories are surrounded by []'s.  mp3s and m3us are listed after.
+     - Double-click or press enter when you have a directory selected to view
+       the contents of it.  Double-clicking on "[..]" will take you to the
+       parent directory.
+     - Type a letter to go to the next mp3 or m3u starting with that letter.
+     - When an mp3 is selected, the info for it will be displayed at the bottom
+       of the dialog.
+     - When an m3u is selected, the number of mp3s in it will be displayed.
+     - Double-click on an mp3 or m3u to select it and close the dialog.
+     - m3us will always be added to the play queue.
+
+
+
+ ===========
+  /Commands
+ ===========
+   Playing mp3s through mp3stuff can also be done through the command line.
+   Here are some of the commands available.  Parameters surrounded by []'s
+   are optional.  For all [0|1]'s, a 0 means 'no', and a 1 means 'yes.'
+
+     /mp3stuff lc
+       Function:  Opens the file-selecting dialog & sets mode to 'listen.'
+
+     /mp3stuff pc [#|nick]
+       Function:  Opens the file-selecting dialog & sets mode to 'play to.'
+         - Separate multiple channels or nicks by commas (no spaces).
+         - Use "all" for all channels.
+
+     /mp3stuff lr [0|1] [0|1]
+       Function:  Opens a random mp3 in 'listening' mode.
+         - The first [0|1] specifies continuous play.
+         - The second [0|1] specifies a forced enqueue.
+           - Use 1 for 'forced enqueue.'
+           - Use 0 for 'play immediately.'
+           - If none specified, 'enqueue by default' setting will be used.
+           - Forced enqueue turns continuous play on.
+
+     /mp3stuff pr [#|nick] [0|1] [0|1]
+       Function:  Opens a random mp3 in 'play to' mode.
+         - Use %mp3stuffplayto for current channel/nick list.
+         - Separate multiple channels or nicks by commas (no spaces).
+         - Use "all" for all channels.
+         - The first [0|1] specifies continuous play.
+         - The second [0|1] specifies a forced enqueue.
+           - Use 1 for 'forced enqueue.'
+           - Use 0 for 'play immediately.'
+           - If none specified, 'enqueue by default' setting will be used.
+           - Forced enqueue turns continuous play on.
+
+     /mp3stuff adv
+       Function:  Opens the next mp3 in the play queue, or a random one if the
+                  queue is empty.  Continuous play will be enabled.  Same as
+                  clicking on 'next.'
+
+     /mp3stuff ad [#]
+       Function:  Sends out your custom channel advertisement.
+         - Separate multiple channels by commas (no spaces).
+         - Use "all" for all channels.
+
+     /mp3stuff list [0|1] [0|1]
+       Function:  Updates your mp3 list.
+         - The first [0|1] specifies if you want full info or not.
+         - The second [0|1] specifies if you want the length of time it takes
+           to create the playlist recorded or not.  The time will be shown at
+           the end of the file.
+
+     /mp3stuffc [x] [y]
+       Function:  Opens the remote control dialog.
+         - [x] and [y] are the position of the dialog (Use -1 for default x/y).
+
+     /mp3stuffs
+       Function:  Opens the uhm... stuff dialog?
+
+     /mp3stuffo
+       Function:  Opens the options dialog.
+
+     /mp3stuffq
+       Function:  Opens the send-queue editor.
+
+     /aboutmp3stuff
+       Function:  Opens the 'about' dialog.
+
+     /downloadmp3stuff
+       Function:  Installs the newest version.
+
+--------------------------------------------------------------------------------
+
+ =================
+  Fixes/Additions
+ =================
+
+  1999.06.01 (0.949)
+   - Really old, one of the first versions
+
+  1999.07.13 (0.95)
+   - Rewrote stuff
+   - Two files now
+
+  ...
+
+  2000.02.05 (0.985)
+   - Last version for mIRC v5.61
+
+  ...
+
+  2000.11.10 (0.9901)
+   - Started documenting changes
+   - Improved file serving message delay stuff
+     (Doesn't send messages that were replying to @commands
+      done in channels if you're not in that channel anymore)
+   - Improvements to /mp3search window popup
+   - Support for mIRC v5.8 mp3 player
+
+  2000.11.29 (0.9902)
+   - Added checkbox to file select dialog, "dialog re-opens"
+   - When adding files to playlist, the file selecting
+     dialog now re-opens for another selection.
+
+  2000.12.? (0.9903)
+   - Remote control dialog now saves previous ontop/desktop settings
+
+  2000.12.? (0.9904)
+   - Added 'add m3u' and 'save copy' buttons to playlist editor
+
+  2000.12.04 (0.9905)
+   - Re-arranged playlist editor & added a 'done' button
+   - New documentation of play aliases in help file
+
+  2000.12.06 (0.9906)
+   - Fixed problems with remote control not saving settings
+   - Fixed infinite loop, and some other things with the playlist editor
+   - Fixed mute bug
+
+  2000.12.12 (0.9907)
+   - New option for a custom play message (in 'display' tab of options dialog)
+
+  2000.12.13 (0.9908)
+   - Enter "all" into the 'play to' edit box in the remote control or the mp3
+     selecting dialog, and it will play to all channels.
+
+  2000.12.13 (0.9909)
+   - Fixed some bugs, made some adjustments..
+   - Re-arranged some stuff in the 'display' tab of the options dialog
+   - Added option to specify random play message colors (under 'display')
+
+  2000.12.17 (0.991)
+   - Fixed some bugs with options dialog, cleaned up a lot of code
+   - New popups for playing to all
+   - If you are in no channels and play to 'all,' it will play to all queries.
+
+  2001.01.07 (0.9911)
+   - Fixed a problem with random colors going to color 0 when only your normal
+     and background colors were in the list.
+   - 'All colors' button renamed to 'default'
+   - 'Default' random colors now include all _but_ normal and background colors
+     (instead of all). You can now get your current normal and background
+     colors from random, you just have to add them in to the list in the
+     'display' tab of the options dialog.
+   - Added support for these tags in custom play message:
+       <open slots> <used slots> <slots> <open queues> <used queues> <queues>
+   - Fixed bug where remote control would be activated when a new song starts
+
+  2001.01.08 (0.9912)
+   - Fixed a bug which was causing a slow startup.
+
+  2001.01.08 (0.9913)
+   - Renamed <r> and </r> tags to <c> and </c>.
+   - Added support for a more customizable listening echo.
+
+  2001.01.08 (0.9914)
+   - Fixed bug: things weren't displaying properly when no colors were
+     specified
+   - Fixed bug: <c> tags were always returning random colors in play message
+
+  2000.01.? (0.9915)
+   - Re-arranged options dialog (it's a lot bigger)
+   - Added controls to save/recall/remove custom colors, echos, and messages
+   - Changed variables for colors, listening echo and play message
+     (Your old ones are in %mp3stuffrc, %mp3stuffle and %mp3stuffmsg)
+   - Added <mp3count> tag
+   - Fixed bug with listening echo (really this time) and others
+
+  2000.01.? (0.9916)
+   - Added 'search' and 'cancel' buttons to the mp3 selecting dialog.
+     The 'search' button opens "/mp3search *".
+
+  2000.01.? (0.9917)
+   - Fixed bug in auto install (from v0.9915)
+
+  2000.01.? (0.9918)
+   - Fixed bug when loading options dialog with presets
+     (Froze only mIRC v5.81+)
+
+  2000.01.? (0.9919)
+   - Fixed bug, it wouldn't save presets if mp3stuff.pre didn't exist
+
+  2000.01.? (0.992)
+   - Fixed bug in file serving.. it was saying it couldn't find the file
+     (Only happened in mIRC v5.81)
+
+  2000.01.14 (0.9921)
+   - Added <mp3noext> tag for the filename without the .mp3 file extension.
+   - Added <list count> and <list size> tags, for number of mp3s in your list
+     and the size of those mp3s.
+   - Put an edit box (instead of text) on the display tab of the options dialog
+     with a list of supported tags, so you can now copy and paste from there.
+   - Fixed (interesting) bug in mp3 selecting dialog, gotten after doing
+     something such as changing id3 tag of the mp3 you last chose (to change
+     file size) or clearing the cache.
+   - Changed names of mp3stuff files, now they all start with "mp3stuff"
+     (except mp3stuf1.mrc) instead of "mp3stuf" + something.
+
+  2000.01.? (0.9922)
+   - Split the 'display' tab of the options dialog into two tabs,
+     'local display' and 'public display'
+   - Added option to change other echos ('bullet for other echos')
+   - Added option for custom 10-minute timed channel advertisement.
+   - Fixed mute again.  It wouldn't let you play to channels when it was on.
+
+  2000.01.? (0.9923)
+   - Fixed bug in listening echo
+
+  2000.01.17 (0.9924)
+   - Changed colors for file serving messages, now uses color 15, background 1
+     instead of your default normal/background colors.  Your specified random
+     colors will now be used in file serving messages, excluding 15 and 1.
+     If no other colors are specified or random colors are disabled, color 14
+     will be used instead of a random color.
+   - Added documentation for more aliases
+   - Fixed pr and pc commands, the [#|nick] parameter was required. now it is
+     optional.
+   - Fixed some echo related stuff
+
+  2000.01.22 (0.9925)
+   - Added buttons that let you change the number of minutes to wait between
+     custom channel advertisements.
+   - Made the mp3 & directory selecting dialogs save the drive letters for the
+     drop-down menu, so it won't scan for them each time you open it (it opens
+     faster now in some situations).
+   - For the mp3 & directory selecting dialogs, added a "refresh" option in the
+     drop-down menu to refresh the current directory and rescan for drive
+     letters.
+   - Edit boxes in the options dialog now take effect immediately, like
+     everything else there.
+   - Renamed 'ok' button in options dialog to 'close'
+   - Renamed 'done' button in playlist editor to 'save & close'
+   - Fixed bug in list maker (didn't work in 5.7)
+
+  2000.01.22 (0.9926)
+   - argh.  Fixed bug in install.
+
+  2000.01.? (0.9927)
+   - @Locator/@Find note can now use the same tags as the timed channel ad can.
+   - Added option to change color for </c> tags in echos.
+   - Made options dialog bigger.
+   - Made playlist editor bigger.
+   - Improved a lot of code; options dialog is faster & closes instantly.
+
+  2000.01.? (0.9928)
+   - Fixed some small bugs and made some improvements
+   - Made some adjustments to dialogs
+
+  2000.01.? (0.9929)
+   - When adding files from an .m3u into the playlist editor, if the .m3u does
+     not contain the full directory info for a playlist entry (winamp sometimes
+     makes .m3u files like this), the directory of the .m3u will be added at
+     the beginning of the entry.
+   - (Important) Fixed bug with slots that made it possible for people to use
+     up more slots than you wanted.
+   - Fixed small bug in list maker, only did first directory in mirc 5.8
+
+  2000.01.30 (0.993)
+   - Fixed bugs with presets
+   - Fixed/Changed some small things
+
+  2000.02.? (0.9931)
+   - Fixed bug, list maker wasn't working in mirc 5.8+
+
+  2000.02.? (0.9932)
+   - stuffamp is now included (you can only use it in mIRC 5.8+).  popups for
+     stuffamp are under "mp3stuff > more options"
+   - Fixed bug in file & directory selecting dialogs
+   - Fixed channel ad not starting on startup
+   - Added option in popup menu to advertise mp3stuff to active channel/query
+
+  2000.02.? (0.9933)
+   - Fixed bugs (Froze mIRC 5.7 & 5.71)
+
+  2000.02.10 (0.9934)
+   - Fixed bugs with Windows 2000
+
+  2000.02.11 (0.9935)
+   - Fixed "* /if: 'b' unknown operator" bug
+
+  2000.02.14 (0.9936)
+   - Fixed file selecting dialog and file info bugs
+   - Added "edit mp3 directories" option to /mp3search popup menu (it opens the
+     options dialog to the tab with mp3 directories).
+
+  2000.02.? (0.9937)
+   - Sped up @Locator/@Find by searching a cached list instead of hard drives
+   - Fixed some bugs in playlist editor
+   - Fixed another Windows 2000 bug :)
+
+  2000.02.? (0.9938)
+   - Fixed bug when searching for files (Auto-send/@Locator)
+
+  2000.02.25 (0.9939)
+   - Changed auto-install to NSIS.
+   - Auto-install works properly in windows 2000 now
+
+  2000.04.15 (0.994)
+   - Improvements/fixes made in stuffamp.
+   - Fixed 'force enqueue' options in commands.  The parameter actually
+     specified if you wanted to 'play immediately'.  oops.  Now, if you use '0'
+     it will play immediately, and if no number is used, it will use the
+     setting for 'Enqueue by default'.
+   - 'adv' command will now always enable continuous play.  before, it only did
+     this when there were no files in the play queue.
+   - Changed the 'random' button on remote control to a 'next' button.  this
+     does the same thing as clicking on '[ next mp3 ]' in the popup.
+   - Changed 'add file' button in playlist editor to 'add mp3/m3u', and removed
+     the 'add m3u' button.
+   - File-selecting dialog now lists .m3u playlist files.  Iif you open one, all
+     the mp3s listed in it will be added to the play queue.
+   - Added an option in the popup to clear the play queue (only appears when
+     files are queued).  Popup:  "mp3stuff > more options > clear play queue"
+   - Re-arranged display for directory contents in file-selecting dialog.
+   - You can now press a letter to go to the mp3 starting with that letter in
+     the file-selecting dialog.
+   - Added shortcuts (alt+c, etc.) to dialogs.
+   - Added option to send play message as an action.
+   - Options dialog and playlist editor now open on the desktop.
+   - Added option in popup to display channel ad once.
+
+  2000.04.? (0.9941)
+   - Added 'open all' button to file-selecting dialog.  Clicking on it will
+     add all files in the current directory to the play queue. (Not recursive)
+   - Added documentation for the command to update your mp3 list.
+   - Added 'mp3/m3u dialog re-opens' checkbox to the 'stuff' section of the
+     options dialog.  it's the same option as on the file-selecting dialog.
+
+  2000.04.19 (0.9942)
+   - Fixed bug in continuous play while playing to channel.  sorry about that.
+
+  2000.04.? (0.9943)
+   - Fixed to work with mIRC v5.9.
+
+  2000.04.? (0.9944)
+   - Echoes now indent on the next line if they wrap.
+   - Fixed bugs in slot/queue info.
+   - Mp3stuff will now search your mp3 directories for dead files in the play
+     queue, and play them if found.
+   - Changed queue echo and default listening echo slightly (colored the "-").
+     it used to be like this before.
+   - Fixed some minor issues with mIRC v5.9.
+
+  2001.04.30 (0.9945)
+   - Added popups "choose an mp3" and "next mp3."  these are always in the
+     popup, and they use the current play mode settings.
+   - Added popups to change play mode (listen/play-to) and play-to channels.
+   - Installation file is smaller now.
+   - Combined mp3stuff.mrc and mp3stuf1.mrc into one file (mp3stuff.mrc).
+   - Fixed bug with cached list (for @Locator/@Find).
+   - Fixed some file selecting bugs with mIRC v5.9.
+
+  2001.05.04 (0.9946)
+   - Fixed a bug "c:\blah\blah\ unknown command."
+   - Made options dialog a little smaller.
+   - Stuffamp goes faster now.
+
+  2001.06.02
+   - New version numbering system.
+   - Improved code & split into 2 .mrc files again (it got too big for one).
+   - Added a progress bar for downloading new versions.
+   - Fixed bug in buttons for send/queue slots options.
+   - Fixed bug in /mp3search.
+
+  2001.06.03
+   - New tags (id3 info) for play messages, mIRC 5.8+ only:
+       <album> <title> <artist> <year> <comment> <genre> <track>
+
+  2001.06.03a
+   - Fixed bug when trying to remove an mp3 directory (really this time).
+   - mp3stuff now saves the last 100 mp3s you have played.  Added /mp3history,
+     opens a window with the history.
+   - Added listen/play-to popups to /mp3search window.
+
+  2001.06.07
+   - Added play queue editor.
+   - Re-arranged the popup menu.
+   - Added a popup in the mp3 history window to change the history length.
+   - Fixed the "use playlist as random mp3 source" option checkbox not working.
+   - Changed play queue so it doesn't save the listen/play-to settings you had
+     when you added the files.  This way, you can change play mode and have the
+     mp3s in the play queue use that setting.
+
+  2001.06.08
+   - Merged play queue editor, mp3 history, and mp3 search into one dialog.
+   - Re-arranged the popup menu again.
+
+  2001.06.10
+   - Added 'stop at end of play queue' option in the play queue editor dialog.
+   - Fixed bugs in playlist editor and options dialog.
+
+  2001.06.16
+   - Renamed local/public display tabs in options dialog to "local echos" and
+     "public messages."
+   - Added option to not echo anything while listening with stuffamp open.
+   - Moved mute option to the public messages tab of the options dialog.
+   - Added a shuffle option for the play queue.  The shuffle button in stuffamp
+     now toggles this.
+   - New remote control with spam button (sends your play message).
+   - The "|<" button in stuffamp and the new "<< prev" button in the remote
+     control listen to the previously played song.
+   - Syntax change for /mp3stuffc (remote control).
+   - Added custom mp3stuff input dialog, so it won't switch focus to mIRC when
+     editing certain things in the options dialog.
+   - Made playlist edititor faster.
+   - Fixed to work with mIRC v5.91.
+
+  2001.06.16a
+   - Fixed bug that was preventing mp3stuff from importing the old playlist.
+
+  2001.06.25
+   - Fixed bug where the mp3 would only play halfway.
+   - Combined the playlist editor and the file browser into the dialog with the
+     play queue, mp3 history, and mp3 search.
+   - New alias, /mp3stuffs, to open that there dialog with all them stuffs.
+   - Added ".." button to the file browser.
+   - New channel selecting dialog.
+   - Added functionality so you can select more than one file in the file-
+     browser, mp3 search, etc., and added buttons to enqueue them or add them
+     to the playlist.
+   - Re-arranged the popup to make things more convenient.
+   - Click on the "--------- *.mp3" and "--------- *.m3u" lines in the file
+     browser to select all of that type in the current directory.
+   - Changes made to playlist now take effect immediately.
+   - Changed default presets for colors, listening echo and play message.
+   - Remote control now remembers its position after closing.
+
+  2001.06.25a quick-fix-o-rama
+   - Fixed some bugs with queue echos.
+   - Added "X lines selected" status info for the file browser.
+
+  2001.06.25b
+   - Sped up "enqueue" and "add to playlist" functions.
+   - Fixed bugs with play-to mode, mute, continuous play and enqueue by
+     default.
+
+  2001.06.25c
+   - Fixed spam button on mp3stuffs dialog.
+   - Fixed bug when enqueueing files from the playlist editor.
+
+  2001.06.26
+   - Fixed bug with playlist.
+   - Fixed bug with continuous play.
+
+  2001.07.03
+   - Fixed some small bugs with queue echos and stuff.
+   - Fixed bug when pressing enter in the file browser.
+   - Added a friend list so you can let people bypass the file queues.
+   - Added an option to change the number of seconds to wait between each file
+     serving message (to avoid a possible excess flood when @Find/@Locator is
+     enabled).
+
+  2001.07.04
+   - Fixed locking bug when files are requested.
+   - Fixed some bugs with file serving.
+   - Added option to open the remote control on startup.
+
+  2001.07.05
+   - Fixed some problems with mIRC 5.7.
+   - Stuffamp now has the option to not open on /splay when called from other
+     scripts.
+
+  2001.07.07
+   - Fixed bug with file serving message timer interval.
+   - Rearranged options dialog (it's much smaller now).
+
+  2001.07.08
+   - Fixed bug where "add directory" was not working.  This bug only appeared
+     when using mIRC32 v5.8.
+
+  2001.07.08a
+   - Fixed bug when enqueueing from the mp3 history.
+
+  2001.07.09
+   - Fixed bug -- file serving message delay was not working correctly.
+   - Added an option, 'respond to requests when features are disabled.' under
+     the 'file serving msgs' section of the options dialog.
+
+  2001.07.20
+   - Added option to use WinZip to create a .zip file for the mp3 list.
+   - Fixed bug with 'open random' buttons on the play queue/playlist dialog.
+
+  2001.10.24
+   - Oops, I busted the auto-download for 10 mins..
+
+  2001.10.24a
+   - Added an option to change the zip command for the mp3 list.
+   - Added an option to replace underscores (_) with spaces when playing mp3s.
+   - When enqueueing mp3s from the mp3 history, they will be now be added in
+     the order they were played.
+   - Removed colors from file serving notices.
+   - Added options under "file serving" in the options dialog for limiting the
+     channels you serve in.
+   - Fixed bug: when playlist restarted, it would echo it many times.
+   - Fixed some other small bugs.
+
+  2001.10.24b
+   - Fixed a 'nk' alias bug.
+
+  2001.10.24c
+   - Important bug fix; it was halting when people did "!nick file" requests.
+
+  2001.10.31
+   - I had to change the version check/download site.
+   - Now when you limit the file serving channels, the timed channel ad will
+     not play to channels not in the list.
+
+  2002.02.06
+   - Fixed it so it won't echo if you use the option to disable listening echos
+     when stuffamp is open.
+   - Fixed bug in the options dialog - controls for editing queues and slots
+     were mixed up.
+   - Merged mp3stuff.mrc and mp3stuf1.mrc into one file.
+   - Added an option in the tags dialog to choose how <!nickmp3> acts when the
+     mp3 isn't available for download (<mp3> or <mp3noext>).  To get to the
+     tags dialog, click on 'play message' in the options dialog and click the
+     'view tags' button.
+   - Added an option in the tags dialog to replace 'Joint Stereo' with 'Stereo'
+     in the <stereo> tag.
+   - Fixed stuff so it works with the new mIRC 6.0.
+
+  2002.05.21a
+   - Fixed it so if you want to use another compatible mIRC mp3 player besides
+     stuffamp (such as argh-amp), continuous play will now work properly.
+     Previously, pause wouldn't work properly unless stuffamp was loaded.
+   - Fixed bug with "!nick file" requests where it wouldn't find the file if
+     the request line had spaces where the file had underscores.
+   - Redesigned the options dialog.  It's less cramped and easier to read now.
+   - Removed option for using windows file selection dialogs.
+   - Changed list command from "/mp3stuff ls" to "/mp3stuff list"
+   - Fixed bugs with mp3 CTCP listening.
+   - Removed feature that would start playing the next mp3 in the play queue
+     when continuous play was turned on.
+   - Removed popup echos.
+   - Auto-install won't ask you to run initialization commands any more.
+   - Fixed file-queue bug.
+   - Changed <time> tag to <length>.
+   - Fixed a bug in the custom play message edit boxes in the options dialog.
+   - Added a file-serving queue editor, a popup that appears when appropriate,
+     and a command to open the dialog (/mp3stuffq).
+
+  2002.05.21b
+   - Added controls to move mp3s up or down in the play queue.
+
+  2002.06.07
+   - Fixed bugs that appeared when using the new mIRC v6.02.
+
+  2002.06.08
+   - Changed a timer to work around a bug in mIRC v6.02.  Songs were getting
+     cut off at the end because mIRC v6.02's timers are inaccurate.
+
+  2002.08.09
+   - If you double-click an mp3 in the play queue that doesn't exist, mp3stuff
+     will search for it in your mp3 directorys the same way it does when it
+     plays the next mp3 in the queue automatically.
+   - Added options for main dialogs to be on the desktop or not, and always on
+     top or not.
+   - Added an option for the <length> tag to use a custom alias.  You can find
+     it when you press one of the three 'View tags' buttons in the options
+     dialog (under 'Local echos,' 'Play message,' and 'Timed channel ad').
+   - Fixed a bug in the mp3 searching cache.
+
+  2002.08.11
+   - Changed the way mp3 length is displayed from XXmXXs to XX:XX.
+   - Removed debug code in the list maker (forgot to last version).
+   - Modified popup menus to use real checkmarks in newer versions of mIRC.
+   - Added options for enabling and disabling certain popup menus, and some
+     options for extra elements.
+
+  2002.08.11a
+   - Fixed a bug in the popup options.
+
+  2002.08.11b
+   - Fixed a bug with the popup options section in older versions of mIRC.
+
+--------------------------------------------------------------------------------
